@@ -1,0 +1,210 @@
+/* ALL PAGES THE SAME */
+@font-face {
+    font-family: 'goodtimes';
+    src: url('../fonts/goodtimesrg.ttf') format('truetype');
+}
+
+/*body {
+    background-image: url(../img/background.jpg);
+}*/
+
+h1 {
+    font-family: 'goodtimes';
+    text-align: center;
+}
+
+/* ------ HEADLINE ------- */
+.user-letters{
+    color: firebrick;
+}
+
+.database-letters {
+    color: grey;
+}
+
+/* ------ HORIZONTAL LINE ------- */
+hr {
+    height: 5px;
+    background-color: grey;
+    border-width: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ BUTTONS ------- */
+.div-wrapper-buttons {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100px;
+}
+
+/* EFFECT FOR ALL BUTTON-DIVS */
+.div {
+    float:left; 
+    width: 19%;
+    height: 100px;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* ------ DEBUG ------- */
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR DIV NEW ENTRY */
+/*.new-entry {
+    border: solid 1px lightgreen;
+}
+
+/* EFFECT FOR DIV EDIT ENTRY */
+/*.edit-entry {
+    border: solid 1px purple;
+}
+
+/* EFFECT FOR DIV SEARCH */
+/*.search {
+    border: solid 1px green;
+}
+
+/* EFFECT FOR DIV PRINT */
+/*.print {
+    border: solid 1px gray;
+}
+
+/* EFFECT FOR DIV EXPORT */
+/*.export {
+    border: solid 1px yellow;
+}*/
+/* -------------------------------------------------------------------------- */
+/* ------ DEBUG ------- */
+/* -------------------------------------------------------------------------- */
+
+
+
+/* EFFECT FOR ALL BUTTONS */
+.button {
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 22px;
+    text-decoration: none;
+    margin: 20px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+/* EFFECT FOR BUTTON NEW ENTRY */
+.btnnewentry {
+    background-color: #55acee;
+    box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.btnnewentry:hover {
+  background-color: #6FC6FF;
+}
+
+/* EFFECT FOR BUTTON EDIT ENTRY */
+.btneditentry {
+  background-color: #2ecc71;
+  box-shadow: 0px 5px 0px 0px #15B358;
+}
+
+/* EFFECT FOR BUTTON SEARCH */
+.btnsearch {
+  background-color: #e74c3c;
+  box-shadow: 0px 5px 0px 0px #CE3323;
+}
+
+/* EFFECT FOR BUTTON PRINT */
+.btnprint {
+  background-color: #9b59b6;
+  box-shadow: 0px 5px 0px 0px #82409D;
+}
+
+/* EFFECT FOR BUTTON EXPORT */ 
+.btnexport {
+  background-color: #e67e22;
+  box-shadow: 0px 5px 0px 0px #CD6509;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* ------ MEDIA ENTRIES / RACK ------- */
+.div-rack {
+    position: relative;
+    margin: 20px auto 0 auto;
+    width: 945px;
+    height: 206px;
+    background-image: url(../img/rack_dark.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+/* ONE DVD COVER FRAME */
+.div-dvd-frame {
+    width: 146px;
+    float: left;
+    height: 150px;
+    background: magenta;
+    margin: 20px;
+    margin-top: auto;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR POP UP BOX */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  /*transition: opacity 200ms;*/
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 400px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 2s;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: firebrick;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
