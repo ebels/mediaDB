@@ -1,21 +1,12 @@
+<?php
+ include("header.html");
+?>
+
 <!DOCTYPE html>
 <html>
-	<head>
-    <title>EMDB</title>
+	<head>  
     <link rel="stylesheet" type="text/css" href="../styles/form.css" />
-	</head>
-    
-	<body>
-        <br>
- 
-<!-- -------------------------------------------------------------------------- -->
-<!-- TWO COLORED HEADLINE -->
-        <h1>
-            <!--<span class="user-letters">EBEL'S </span>-->
-            <span class="database-letters">MEDIA DATABASE</span>
-        </h1>
-        <br>
-        <hr>      
+	</head>  
 
 <!-- -------------------------------------------------------------------------- -->
 <!-- FORM HEADLINE -->
@@ -27,7 +18,7 @@
                 
                 <!-- BUTTON BACK TO MAIN -->
                 <th class="th form-buttonback">
-                    <a class="button-back" href="../index.html">zur&uuml;ck zur Hauptseite</a>
+                    <a class="button-back" href="../index.php">zur&uuml;ck zur Hauptseite</a>
                 </th>
             </tr>
         </table>
@@ -38,7 +29,7 @@
         
 <!-- -------------------------------------------------------------------------- -->        
         <!-- FORM NEW FILM ENTRY -->
-        <form action="../addentry.php" method="post">
+        <form action="addentry.php" method="post">
             <!-- FORM BOXES -->
             <div class="div-container-form">
                 <br>
@@ -53,7 +44,7 @@
                     <!-- FORM COVER -->
                     <div class="div-cover">
                         <label class="label-cover">Upload a Cover Picture</label><br>
-                        <input class="button-cover" type="file" value="Upload file" />
+                        <input class="button-cover" type="file" name="cover" value="Upload file" />
                     </div>
                 </div>
                 
@@ -70,12 +61,18 @@
                     <!-- FORM DATE -->
                       <div class="div-date">
                          <label class="label-date">Erscheinungsjahr</label><br>
-                         <input class="input-date" type="date" name="date" value="" size="30"/>
+                         <select name="date">
+                            <?php
+                                for($i = 1900; $i < date("Y")+1; $i++){
+                                    echo '<option value="'.$i.'">'.$i.'</option>';
+                                }
+                            ?>
+                          </select>
                      </div>
                     <!-- FORM COUNTRY -->
                     <div class="div-country">
                         <label class="label-country">Land</label><br>
-                        <select>
+                        <select name="country">
                             <option value=""></option>
                             <option value="AF">Afghanistan</option>
                             <option value="AX">&Aring;land Islands</option>
@@ -341,7 +338,7 @@
                 <!-- FORM FSK -->
                 <div class="div-fsk">
                     <label class="label-fsk">Altersfreigabe</label><br>
-                    <select required>
+                    <select required name="fsk">
                         <option value=""></option>
                         <option value="FSK 0">FSK 0</option>
                         <option value="FSK 6">FSK 6</option>
@@ -354,12 +351,13 @@
                 <!-- FORM GENRE -->
                 <div class="div-genre">
                     <label class="label-genre">Genre</label><br>
-                    <select required>
+                    <select required name="genre">
                         <option value=""></option>
                         <option value="action">Action</option>
                         <option value="drama">Drama</option>
                         <option value="erotik">Erotik</option>
                         <option value="fantasy">Fantasy</option>
+                        <option value="kinder">Kinder</option>
                         <option value="komoedie">Kom&ouml;die</option>
                         <option value="horror">Horror</option>
                         <option value="liebe">Liebe</option>
