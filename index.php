@@ -2,7 +2,8 @@
 <html>
 	<head>
     <title>EMDB</title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
 	</head>
     
 	<body>
@@ -21,7 +22,7 @@
 <!-- BUTTONS -->
         <div class="div-wrapper-buttons">
             <div class="div new-entry">
-                <a class="button btnnewentry" href="pages/newentry.html">Eintrag hinzuf&uuml;gen</a>
+                <a class="button btnnewentry" href="pages/newentry.php">Eintrag hinzuf&uuml;gen</a>
             </div>
             
             <div class="div edit-entry">
@@ -42,9 +43,20 @@
         </div>
         
         <hr>
+ 
+<!-- -------------------------------------------------------------------------- -->       
+<!-- DIV FOR ENTRY -->
+            <!--<div class="div-entry">-->
+                <?php
+                    include("pages/showentry.php");
+                ?>
+            <!--</div>-->
+
+        
         
 <!-- -------------------------------------------------------------------------- -->
 <!-- RACK FOR DVD FRAMES -->
+<!--
         <div class="div-rack">
             <div class="div-dvd-frame">
                 <a class="button-infos" href="#popup1"><img src="img/cover/theavangers.jpg" width="146px" height="150px"></a>
@@ -63,9 +75,10 @@
             <div class="div-dvd-frame"><a class="button-infos" href="#popup1"><img src="img/cover.png" width="146px" height="150px"></a>
             </div>
         </div>
-        
-<!-- -------------------------------------------------------------------------- -->        
+  
+<!-- -------------------------------------------------------------------------- -->
 <!-- POP UP BOX -->
+<!--
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Here i am</h2>
@@ -75,6 +88,8 @@
                 </div>
             </div>
         </div>
+-->
+        
 <!-- -------------------------------------------------------------------------- -->        
    
 	</body>

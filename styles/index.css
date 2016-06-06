@@ -1,33 +1,6 @@
-/* ALL PAGES THE SAME */
-@font-face {
-    font-family: 'goodtimes';
-    src: url('../fonts/goodtimesrg.ttf') format('truetype');
-}
-
 /*body {
     background-image: url(../img/background.jpg);
 }*/
-
-h1 {
-    font-family: 'goodtimes';
-    text-align: center;
-}
-
-/* ------ HEADLINE ------- */
-.user-letters{
-    color: firebrick;
-}
-
-.database-letters {
-    color: grey;
-}
-
-/* ------ HORIZONTAL LINE ------- */
-hr {
-    height: 5px;
-    background-color: grey;
-    border-width: 0;
-}
 
 /* -------------------------------------------------------------------------- */
 /* ------ BUTTONS ------- */
@@ -44,41 +17,6 @@ hr {
     width: 19%;
     height: 100px;
 }
-
-
-
-/* -------------------------------------------------------------------------- */
-/* ------ DEBUG ------- */
-/* -------------------------------------------------------------------------- */
-/* EFFECT FOR DIV NEW ENTRY */
-/*.new-entry {
-    border: solid 1px lightgreen;
-}
-
-/* EFFECT FOR DIV EDIT ENTRY */
-/*.edit-entry {
-    border: solid 1px purple;
-}
-
-/* EFFECT FOR DIV SEARCH */
-/*.search {
-    border: solid 1px green;
-}
-
-/* EFFECT FOR DIV PRINT */
-/*.print {
-    border: solid 1px gray;
-}
-
-/* EFFECT FOR DIV EXPORT */
-/*.export {
-    border: solid 1px yellow;
-}*/
-/* -------------------------------------------------------------------------- */
-/* ------ DEBUG ------- */
-/* -------------------------------------------------------------------------- */
-
-
 
 /* EFFECT FOR ALL BUTTONS */
 .button {
@@ -126,9 +64,57 @@ hr {
   box-shadow: 0px 5px 0px 0px #CD6509;
 }
 
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR DIV ENTRY ------- */
+.div-entry {
+    border: solid 1px black;
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+
+.div-title {
+    background-color: yellow;
+}
+
+.div-filminfo {
+    background-color: purple;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* ------ DEBUG ------- */
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR DIV NEW ENTRY */
+/*.new-entry {
+    border: solid 1px lightgreen;
+}
+
+/* EFFECT FOR DIV EDIT ENTRY */
+/*.edit-entry {
+    border: solid 1px purple;
+}
+
+/* EFFECT FOR DIV SEARCH */
+/*.search {
+    border: solid 1px green;
+}
+
+/* EFFECT FOR DIV PRINT */
+/*.print {
+    border: solid 1px gray;
+}
+
+/* EFFECT FOR DIV EXPORT */
+/*.export {
+    border: solid 1px yellow;
+}*/
+/* -------------------------------------------------------------------------- */
+/* ------ DEBUG ------- */
+/* -------------------------------------------------------------------------- */
+
 
 /* -------------------------------------------------------------------------- */
 /* ------ MEDIA ENTRIES / RACK ------- */
+/*
 .div-rack {
     position: relative;
     margin: 20px auto 0 auto;
@@ -140,7 +126,7 @@ hr {
 }
 
 /* ONE DVD COVER FRAME */
-.div-dvd-frame {
+/*.div-dvd-frame {
     width: 146px;
     float: left;
     height: 150px;
@@ -152,6 +138,7 @@ hr {
 
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR POP UP BOX */
+/*
 .overlay {
   position: fixed;
   top: 0;
@@ -159,7 +146,6 @@ hr {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  /*transition: opacity 200ms;*/
   visibility: hidden;
   opacity: 0;
 }
@@ -206,5 +192,6 @@ hr {
     width: 70%;
   }
 }
+*/
 
 /* -------------------------------------------------------------------------- */
