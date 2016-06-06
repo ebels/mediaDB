@@ -1,0 +1,30 @@
+/* ALL PAGES THE SAME */
+@font-face {
+    font-family: 'goodtimes';
+    src: url('../fonts/goodtimesrg.ttf') format('truetype');
+}
+
+/*body {
+    background-image: url(../img/background.jpg);
+}*/
+
+h1 {
+    font-family: 'goodtimes';
+    text-align: center;
+}
+
+/* ------ HEADLINE ------- */
+.user-letters{
+    color: firebrick;
+}
+
+.database-letters {
+    color: grey;
+}
+
+/* ------ HORIZONTAL LINE ------- */
+hr {
+    height: 5px;
+    background-color: grey;
+    border-width: 0;
+}

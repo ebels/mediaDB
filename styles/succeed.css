@@ -1,0 +1,42 @@
+
+/*body {
+    background-image: url(../img/background.jpg);
+}*/
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR LABEL ------- */
+label {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR DIV ENTRY SUCCEED ------- */
+.div-entrysucceed {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    border: solid 1px black;
+    margin: 200px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------*/
+/* ------ EFFCT FOR LINK TO NEW ENTRY ------ */
+.button-addentry {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    padding: 8px 8px;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.button-addentry:hover {
+    background-color: 	Gainsboro;
+}
