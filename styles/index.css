@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR  MAIN PAGE */
+/* -------------------------------------------------------------------------- */
+
 /*body {
     background-image: url(../img/background.jpg);
 }*/
@@ -79,66 +83,9 @@
     background-color: purple;
 }
 
-
-/* -------------------------------------------------------------------------- */
-/* ------ DEBUG ------- */
-/* -------------------------------------------------------------------------- */
-/* EFFECT FOR DIV NEW ENTRY */
-/*.new-entry {
-    border: solid 1px lightgreen;
-}
-
-/* EFFECT FOR DIV EDIT ENTRY */
-/*.edit-entry {
-    border: solid 1px purple;
-}
-
-/* EFFECT FOR DIV SEARCH */
-/*.search {
-    border: solid 1px green;
-}
-
-/* EFFECT FOR DIV PRINT */
-/*.print {
-    border: solid 1px gray;
-}
-
-/* EFFECT FOR DIV EXPORT */
-/*.export {
-    border: solid 1px yellow;
-}*/
-/* -------------------------------------------------------------------------- */
-/* ------ DEBUG ------- */
-/* -------------------------------------------------------------------------- */
-
-
-/* -------------------------------------------------------------------------- */
-/* ------ MEDIA ENTRIES / RACK ------- */
-/*
-.div-rack {
-    position: relative;
-    margin: 20px auto 0 auto;
-    width: 945px;
-    height: 206px;
-    background-image: url(../img/rack_dark.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-
-/* ONE DVD COVER FRAME */
-/*.div-dvd-frame {
-    width: 146px;
-    float: left;
-    height: 150px;
-    background: magenta;
-    margin: 20px;
-    margin-top: auto;
-}
-
-
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR POP UP BOX */
-/*
+
 .overlay {
   position: fixed;
   top: 0;
@@ -192,6 +139,33 @@
     width: 70%;
   }
 }
-*/
 
 /* -------------------------------------------------------------------------- */
+/* EFFECT FOR TABLE */
+.table-output{
+    border-collapse: collapse;
+}
+    
+/* -------------------------------------------------------------------------- */
+th {
+    background-color: grey;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+    padding: 8px;
+    text-align: left;
+    width: 10%;
+}
+    
+/* -------------------------------------------------------------------------- */
+td {
+    border-bottom: 1px solid #ddd;
+    height: 25px;
+    padding: 8px;
+    text-align: left;
+}
+    
+/* -------------------------------------------------------------------------- */
+/* EFFECT: EVERY 2ND (EVEN) ROW COLORED */
+tr:nth-child(even){
+    background-color: #f2f2f2
+}
