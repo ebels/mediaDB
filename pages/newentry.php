@@ -6,7 +6,8 @@
 <html>
 	<head>  
     <link rel="stylesheet" type="text/css" href="../styles/form.css" />
-	</head>  
+	</head>
+    <body>
 
 <!-- -------------------------------------------------------------------------- -->
 <!-- FORM HEADLINE -->
@@ -29,7 +30,7 @@
         
 <!-- -------------------------------------------------------------------------- -->        
         <!-- FORM NEW FILM ENTRY -->
-        <form action="addentry.php" method="post">
+        <form action="addentry.php" method="post" enctype="multipart/form-data">
             <!-- FORM BOXES -->
             <div class="div-container-form">
                 <br>
@@ -404,6 +405,5 @@
         </form>
         
 <!-- -------------------------------------------------------------------------- -->
-        
     </body>
 </html>
