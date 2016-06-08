@@ -41,7 +41,7 @@
 
 <!-- -------------------------------------------------------------------------- -->
 <!-- POP UP BOX -->
-        <div id="popup1" class="overlay">
+<!--        <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Here i am</h2>
                 <a class="close" href="#">&times;</a>
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>       
-     
+     -->
    
 	</body>
 </html>
@@ -73,17 +73,21 @@ $sql= 'SELECT title, origtitle, cover, date, country, length, fsk, genre, actors
 // TABLE FOR OUTPUT //
 echo "<table class='table-output' align=center>
     <tr>
+    <th>Cover</th>
     <th>Filmtitel</th>
     <th>Standort</th>
     <th>Altersfreigabe (FSK)</th>
     </tr>";
 
+$img="";
 // -------------------------------------------------------------------------- //
 // DISPLAY ENTRIES OF DATABASE IN TABLE STYLE //
 foreach ($database->query($sql) as $row)
   {
+    $img=$row['cover'];
     echo "<tr>";
-    echo "<td><a href='#popup1'>" . $row['title'] . "</a></td>";    // TITLE AS LINK + OPEN POPUP ON CLICK // 
+    echo "<td><img style='border-width: 0px;' src='$img' width='50' height='50'/>"; // SET COVER IMAGE //
+    echo "<td><a href='#popup1'>" . $row['title'] . "</a></td>";    // TITLE AS LINK + OPEN POPUP ON CLICK //
     echo "<td>" . $row['location'] . "</td>";
     
     // SET FSK IMAGE // 
@@ -97,11 +101,24 @@ foreach ($database->query($sql) as $row)
         $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK16.jpg" width="50" height="50"/>';
     } elseif ($row['fsk'] == "FSK 18") {
         $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK18.jpg" width="50" height="50"/>';
-    } 
-    echo "<td>" . $fskimage . "</td>";
-    echo "</tr>";    
-  }
+    }
     
+    echo "<td>" . $fskimage . "</td>";
+    echo "</tr>";
+  }
+   
 echo "</table>";
+
+// -------------------------------------------------------------------------- //
+// POP UP BOX
+echo "      <div id='popup1' class='overlay'>
+            <div class='popup'>
+                <h2>Here i am</h2>
+                <a class='close' href='#'>&times;</a>
+                <div class='content'>
+                    HELLO
+                </div>
+            </div>
+        </div>";
 
 ?>
