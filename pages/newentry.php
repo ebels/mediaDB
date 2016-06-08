@@ -6,7 +6,8 @@
 <html>
 	<head>  
     <link rel="stylesheet" type="text/css" href="../styles/form.css" />
-	</head>  
+	</head>
+    <body>
 
 <!-- -------------------------------------------------------------------------- -->
 <!-- FORM HEADLINE -->
@@ -29,7 +30,7 @@
         
 <!-- -------------------------------------------------------------------------- -->        
         <!-- FORM NEW FILM ENTRY -->
-        <form action="addentry.php" method="post">
+        <form action="addentry.php" method="post" enctype="multipart/form-data">
             <!-- FORM BOXES -->
             <div class="div-container-form">
                 <br>
@@ -337,7 +338,7 @@
 <!-- -------------------------------------------------------------------------- -->
                 <!-- FORM FSK -->
                 <div class="div-fsk">
-                    <label class="label-fsk">Altersfreigabe</label><br>
+                    <label class="label-fsk">Altersfreigabe (FSK)</label><br>
                     <select required name="fsk">
                         <option value=""></option>
                         <option value="FSK 0">FSK 0</option>
@@ -355,6 +356,7 @@
                         <option value=""></option>
                         <option value="action">Action</option>
                         <option value="drama">Drama</option>
+                        <option value="drama">Dokumentation</option>
                         <option value="erotik">Erotik</option>
                         <option value="fantasy">Fantasy</option>
                         <option value="kinder">Kinder</option>
@@ -404,6 +406,5 @@
         </form>
         
 <!-- -------------------------------------------------------------------------- -->
-        
     </body>
 </html>

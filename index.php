@@ -1,3 +1,7 @@
+<?php
+    include ("pages/header.html");
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,15 +13,6 @@
 	<body>
         <br>
 
-<!-- -------------------------------------------------------------------------- -->
-<!-- TWO COLORED HEADLINE -->
-        <h1>
-            <!--<span class="user-letters">EBEL'S </span>-->
-            <span class="database-letters">MEDIA DATABASE</span>
-        </h1>
-        <br>
-        <hr>
-        
 <!-- -------------------------------------------------------------------------- -->
 <!-- BUTTONS -->
         <div class="div-wrapper-buttons">
@@ -43,43 +38,10 @@
         </div>
         
         <hr>
- 
-<!-- -------------------------------------------------------------------------- -->       
-<!-- DIV FOR ENTRY -->
-            <!--<div class="div-entry">-->
-                <?php
-                    include("pages/showentry.php");
-                ?>
-            <!--</div>-->
 
-        
-        
-<!-- -------------------------------------------------------------------------- -->
-<!-- RACK FOR DVD FRAMES -->
-<!--
-        <div class="div-rack">
-            <div class="div-dvd-frame">
-                <a class="button-infos" href="#popup1"><img src="img/cover/theavangers.jpg" width="146px" height="150px"></a>
-            </div>
-
-            <div class="div-dvd-frame">
-                <a class="button-infos" href="#popup1"><img src="img/cover.png" width="146px" height="150px"></a>
-            </div>
-
-            <div class="div-dvd-frame"><a class="button-infos" href="#popup1"><img src="img/cover.png" width="146px" height="150px"></a>
-            </div>
-
-            <div class="div-dvd-frame"><a class="button-infos" href="#popup1"><img src="img/cover.png" width="146px" height="150px"></a>
-            </div>
-
-            <div class="div-dvd-frame"><a class="button-infos" href="#popup1"><img src="img/cover.png" width="146px" height="150px"></a>
-            </div>
-        </div>
-  
 <!-- -------------------------------------------------------------------------- -->
 <!-- POP UP BOX -->
-<!--
-        <div id="popup1" class="overlay">
+<!--        <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Here i am</h2>
                 <a class="close" href="#">&times;</a>
@@ -87,10 +49,76 @@
                     Thank to pop me out of that button, but now i'm done so you can close this window.
                 </div>
             </div>
-        </div>
--->
-        
-<!-- -------------------------------------------------------------------------- -->        
+        </div>       
+     -->
    
 	</body>
 </html>
+
+
+<!-- -------------------------------------------------------------------------- -->
+<!-- SHOW DATABASE ENTRIES -->
+<?php
+
+// -------------------------------------------------------------------------- //
+// CONNECT TO DATABASE //
+$database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
+
+// -------------------------------------------------------------------------- //
+// SQLQUERY + RESULT //
+$sqlquery = "SELECT * FROM movies";
+$sql= 'SELECT title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location FROM movies';
+
+// -------------------------------------------------------------------------- //
+// TABLE FOR OUTPUT //
+echo "<table class='table-output' align=center>
+    <tr>
+    <th>Cover</th>
+    <th>Filmtitel</th>
+    <th>Standort</th>
+    <th>Altersfreigabe (FSK)</th>
+    </tr>";
+
+$img="";
+// -------------------------------------------------------------------------- //
+// DISPLAY ENTRIES OF DATABASE IN TABLE STYLE //
+foreach ($database->query($sql) as $row)
+  {
+    $img=$row['cover'];
+    echo "<tr>";
+    echo "<td><img style='border-width: 0px;' src='$img' width='50' height='50'/>"; // SET COVER IMAGE //
+    echo "<td><a href='#popup1'>" . $row['title'] . "</a></td>";    // TITLE AS LINK + OPEN POPUP ON CLICK //
+    echo "<td>" . $row['location'] . "</td>";
+    
+    // SET FSK IMAGE // 
+    if ($row['fsk'] == "FSK 0") {
+        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK0.jpg" width="50" height="50"/>';
+    } elseif ($row['fsk'] == "FSK 6") {
+        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK6.jpg" width="50" height="50"/>';
+    } elseif ($row['fsk'] == "FSK 12") {
+        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK12.jpg" width="50" height="50"/>';
+    } elseif ($row['fsk'] == "FSK 16") {
+        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK16.jpg" width="50" height="50"/>';
+    } elseif ($row['fsk'] == "FSK 18") {
+        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK18.jpg" width="50" height="50"/>';
+    }
+    
+    echo "<td>" . $fskimage . "</td>";
+    echo "</tr>";
+  }
+   
+echo "</table>";
+
+// -------------------------------------------------------------------------- //
+// POP UP BOX
+echo "      <div id='popup1' class='overlay'>
+            <div class='popup'>
+                <h2>Here i am</h2>
+                <a class='close' href='#'>&times;</a>
+                <div class='content'>
+                    HELLO
+                </div>
+            </div>
+        </div>";
+
+?>
