@@ -50,19 +50,23 @@ if($stmt->rowCount() > 0){
             // SHOW ENTRY SUCCEED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
             include('entrysucceed.html');
             header( "refresh:3;url=../index.php" );
+            
         } else {
-             //CHECK IF UPLOADED IMAGE IS IMAGE //
-            if (($info !== IMAGETYPE_GIF) && ($info !== IMAGETYPE_JPEG) && ($info !== IMAGETYPE_PNG)) {
-                //die("Not a gif/jpeg/png");
+            //CHECK IF UPLOADED IMAGE IS IMAGE //
+            $uploaddir = $_SERVER['DOCUMENT_ROOT'] . "/mediaDB/img/cover/";
+            $uploadfile = $uploaddir . basename($_FILES['cover']['name']);
+            
+            $imageFileType = pathinfo($uploadfile,PATHINFO_EXTENSION);
+            
+            // Allow IMAGE FILE FORMATS //
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
                 include('uploadfailed.html');
                 header("refresh:3;url=newentry.php");
+                
             } else {
-                // MOVE UPLOADED IMAGE TO IMAGE DIRECTORY //
-                $uploaddir = $_SERVER['DOCUMENT_ROOT'] . "/mediaDB/img/cover/";
-                $uploadfile = $uploaddir . basename($_FILES['cover']['name']);
-
+                // CHECK IF UPLOAD SUCCEEDED //
                 if (move_uploaded_file($_FILES['cover']['tmp_name'], $uploadfile)) {
-
+                    // NOTHING - GO AHEAD TO SET IMAGE URL
                 } else {
                     include('uploadfailed.html');
                     header("refresh:3;url=../index.php");
