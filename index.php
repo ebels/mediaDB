@@ -1,5 +1,16 @@
 <?php
-    include ("pages/header.html");
+/*********************************************************************
+Modulename: index.php
+Project:    mediaDB
+Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
+
+main page of mediaDB
+
+Version 1.0.0
+2016-06-10
+**********************************************************************/
+
+include ("pages/header.html");
 ?>
 
 <!DOCTYPE html>
