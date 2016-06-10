@@ -35,7 +35,7 @@ include ("pages/header.html");
 
 <!-- -------------------------------------------------------------------------- -->
 <!-- POP UP BOX -->
-<!--        <div id="popup1" class="overlay">
+        <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Here i am</h2>
                 <a class="close" href="#">&times;</a>
@@ -43,8 +43,7 @@ include ("pages/header.html");
                     Thank to pop me out of that button, but now i'm done so you can close this window.
                 </div>
             </div>
-        </div>       
-     -->
+        </div>
    
 	</body>
 </html>
@@ -71,6 +70,7 @@ echo "<table class='table-output' align=center>
     <th>Filmtitel</th>
     <th>Standort</th>
     <th>Altersfreigabe (FSK)</th>
+    <th></th>
     </tr>";
 
 $img="";
@@ -98,21 +98,24 @@ foreach ($database->query($sql) as $row)
     }
     
     echo "<td>" . $fskimage . "</td>";
+    echo "<td><a class='button-delete' href='#popupdelete'>Löschen</a><br>";
+    echo "<a class='button-edit' href='#popupdelete'>Editieren</a></td>";
     echo "</tr>";
   }
    
 echo "</table>";
 
+
 // -------------------------------------------------------------------------- //
-// POP UP BOX
-echo "      <div id='popup1' class='overlay'>
-            <div class='popup'>
-                <h2>Here i am</h2>
-                <a class='close' href='#'>&times;</a>
-                <div class='content'>
-                    HELLO
-                </div>
-            </div>
-        </div>";
+// POP UP BOX DELETE
+echo "<div id='popupdelete' class='overlay'>
+    <div class='popup'>
+        <h2>DELETE</h2>
+        <a class='close' href='#'>&times;</a>
+        <div class='content'>
+            Delete
+        </div>
+    </div>
+</div>";
 
 ?>
