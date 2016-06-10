@@ -1,5 +1,16 @@
 <?php
-// -------------------------------------------------------------------------- //
+/*********************************************************************
+Modulename: addentry.php
+Project:    mediaDB
+Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
+
+add movie entry to database
+
+Version 1.0.0
+2016-06-10
+**********************************************************************/
+
+
 // -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //
 $database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');

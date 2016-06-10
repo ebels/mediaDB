@@ -1,4 +1,15 @@
 <?php
+/*********************************************************************
+Modulename: newentry.php
+Project:    mediaDB
+Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
+
+Formular to add movie to database
+
+Version 1.0.0
+2016-06-10
+**********************************************************************/
+
  include("header.html");
 ?>
 
