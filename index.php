@@ -22,29 +22,12 @@ include ("pages/header.html");
 	</head>
     
 	<body>
-        <br>
 
 <!-- -------------------------------------------------------------------------- -->
 <!-- BUTTONS -->
         <div class="div-wrapper-buttons">
-            <div class="div new-entry">
+            <div class="div-new-entry">
                 <a class="button btnnewentry" href="pages/newentry.php">Eintrag hinzuf&uuml;gen</a>
-            </div>
-            
-            <div class="div edit-entry">
-                <a class="button btneditentry" href="">Eintrag &auml;ndern</a>
-            </div>
-            
-            <div class="div search">
-                <a class="button btnsearch" href="">Suche</a>
-            </div>
-            
-            <div class="div print">
-                <a class="button btnprint" href="">Drucken</a>
-            </div>
-            
-            <div class="div export">
-                <a class="button btnexport" href="">Exportieren</a>
             </div>
         </div>
         
