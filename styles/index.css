@@ -27,8 +27,7 @@ Version 1.0.0
 }
 
 /* EFFECT FOR ALL BUTTON-DIVS */
-.div {
-    float:left; 
+.div-new-entry { 
     width: 19%;
     height: 100px;
 }
@@ -39,7 +38,7 @@ Version 1.0.0
     padding: 15px 25px;
     font-size: 22px;
     text-decoration: none;
-    margin: 20px;
+    margin: 15px;
     color: #fff;
     position: relative;
     display: inline-block;
@@ -53,30 +52,6 @@ Version 1.0.0
 
 .btnnewentry:hover {
   background-color: #6FC6FF;
-}
-
-/* EFFECT FOR BUTTON EDIT ENTRY */
-.btneditentry {
-  background-color: #2ecc71;
-  box-shadow: 0px 5px 0px 0px #15B358;
-}
-
-/* EFFECT FOR BUTTON SEARCH */
-.btnsearch {
-  background-color: #e74c3c;
-  box-shadow: 0px 5px 0px 0px #CE3323;
-}
-
-/* EFFECT FOR BUTTON PRINT */
-.btnprint {
-  background-color: #9b59b6;
-  box-shadow: 0px 5px 0px 0px #82409D;
-}
-
-/* EFFECT FOR BUTTON EXPORT */ 
-.btnexport {
-  background-color: #e67e22;
-  box-shadow: 0px 5px 0px 0px #CD6509;
 }
 
 /* -------------------------------------------------------------------------- */
