@@ -23,7 +23,7 @@ $stmt = $database->query("SELECT title FROM movies WHERE title = '$titleexists'"
 if($stmt->rowCount() > 0){
         // SHOW ENTRY FAILED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
         include('entryfailed.html');
-        header("refresh:3;url=../index.php");
+        header("refresh:5;url=../index.php");
     
     } else {
         //CHECK IF USER CHOOSE IMAGE TO UPLOAD //
@@ -32,7 +32,7 @@ if($stmt->rowCount() > 0){
             $arraynewentry = array();
             $arraynewentry['title']=$_POST['filmtitle'];
             $arraynewentry['origtitle']=$_POST['origtitle'];
-            $arraynewentry['cover']="";
+            $arraynewentry['cover']="/mediaDB/img/dvd.png"; // SET DEFAULT IMAGE //
             $arraynewentry['date']=$_POST['date'];
             $arraynewentry['country']=$_POST['country'];
             $arraynewentry['length']=$_POST['length'];
@@ -49,7 +49,7 @@ if($stmt->rowCount() > 0){
 
             // SHOW ENTRY SUCCEED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
             include('entrysucceed.html');
-            header( "refresh:3;url=../index.php" );
+            header( "refresh:5;url=../index.php" );
             
         } else {
             //CHECK IF UPLOADED IMAGE IS IMAGE //
@@ -58,18 +58,25 @@ if($stmt->rowCount() > 0){
             
             $imageFileType = pathinfo($uploadfile,PATHINFO_EXTENSION);
             
-            // Allow IMAGE FILE FORMATS //
+            // ALLOW IMAGE FILE FORMATS //
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
                 include('uploadfailed.html');
-                header("refresh:3;url=newentry.php");
+                header("refresh:5;url=newentry.php");
                 
             } else {
+                //CHECK IF COVER DIRECTORY EXISTS //
+                if (!is_dir($uploaddir)) {
+                    mkdir ($uploaddir, 0755, true);
+                    
+                }
+                
                 // CHECK IF UPLOAD SUCCEEDED //
                 if (move_uploaded_file($_FILES['cover']['tmp_name'], $uploadfile)) {
                     // NOTHING - GO AHEAD TO SET IMAGE URL
+
                 } else {
                     include('uploadfailed.html');
-                    header("refresh:3;url=../index.php");
+                    header("refresh:5;url=../index.php");
                 }
 
                 // SET IMAGE URL FOR DATABASE ENTRY //
@@ -97,7 +104,7 @@ if($stmt->rowCount() > 0){
 
                 // SHOW ENTRY SUCCEED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
                 include('entrysucceed.html');
-                header( "refresh:3;url=../index.php" );
+                header( "refresh:5;url=../index.php" );
             }
         }
     }
