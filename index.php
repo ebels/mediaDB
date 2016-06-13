@@ -59,7 +59,7 @@ $database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
 
 // -------------------------------------------------------------------------- //
 // SQLQUERY //
-$sql= 'SELECT title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location FROM movies';
+$sql= 'SELECT id, title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location FROM movies';
 
 // -------------------------------------------------------------------------- //
 // TABLE FOR OUTPUT //
@@ -72,7 +72,6 @@ echo "<table class='table-output' align=center>
     <th></th>
     </tr>";
 
-$img="";
 // -------------------------------------------------------------------------- //
 // DISPLAY ENTRIES OF DATABASE IN TABLE STYLE //
 foreach ($database->query($sql) as $row)
@@ -97,24 +96,11 @@ foreach ($database->query($sql) as $row)
     }
     
     echo "<td>" . $fskimage . "</td>";
-    echo "<td><a class='button-delete' href='#popupdelete'>Löschen</a><br>";
+    echo "<td><a class='button-delete' href=\"pages/deleteentry.php?id=".$row['id']."\">Löschen</a><br>";
     echo "<a class='button-edit' href='pages/editentry.php'>Editieren</a></td>";
     echo "</tr>";
   }
    
 echo "</table>";
-
-
-// -------------------------------------------------------------------------- //
-// POP UP BOX DELETE
-echo "<div id='popupdelete' class='overlay'>
-    <div class='popup'>
-        <h2>DELETE</h2>
-        <a class='close' href='#'>&times;</a>
-        <div class='content'>
-            Delete
-        </div>
-    </div>
-</div>";
 
 ?>
