@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 main page of mediaDB
 
 Version 1.0.0
-2016-06-10
+2016-06-13
 **********************************************************************/
 
 include ("pages/header.html");
@@ -58,8 +58,7 @@ include ("pages/header.html");
 $database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
 
 // -------------------------------------------------------------------------- //
-// SQLQUERY + RESULT //
-$sqlquery = "SELECT * FROM movies";
+// SQLQUERY //
 $sql= 'SELECT title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location FROM movies';
 
 // -------------------------------------------------------------------------- //
@@ -99,7 +98,7 @@ foreach ($database->query($sql) as $row)
     
     echo "<td>" . $fskimage . "</td>";
     echo "<td><a class='button-delete' href='#popupdelete'>Löschen</a><br>";
-    echo "<a class='button-edit' href='#popupdelete'>Editieren</a></td>";
+    echo "<a class='button-edit' href='pages/editentry.php'>Editieren</a></td>";
     echo "</tr>";
   }
    
