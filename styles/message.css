@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of entryfailed.php, uploadfailed.php, entrysucceed.html
 
 Version 1.0.0
-2016-06-10
+2016-06-14
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -26,7 +26,7 @@ label {
 
 /* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIV ENTRY SUCCEED ------- */
-.div-entrysucceed {
+.div {
     font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
     border: solid 1px black;
     margin: 200px auto;
@@ -39,7 +39,7 @@ label {
 
 /*-----------------------------------------------------------------*/
 /* ------ EFFCT FOR LINK TO NEW ENTRY ------ */
-.button-addentry {
+.button {
     font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
     padding: 8px 8px;
     line-height: 20px;
@@ -51,6 +51,6 @@ label {
     display: inline-block;
 }
 
-.button-addentry:hover {
+.button:hover {
     background-color: 	Gainsboro;
 }
