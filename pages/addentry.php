@@ -104,7 +104,6 @@ if($stmt->rowCount() > 0){
 
                 // SHOW ENTRY SUCCEED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
                 include('entrysucceed.html');
-                header( "refresh:5;url=../index.php" );
             }
         }
     }
