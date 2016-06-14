@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 main page of mediaDB
 
 Version 1.0.0
-2016-06-13
+2016-06-14
 **********************************************************************/
 
 include ("pages/header.html");
@@ -96,7 +96,7 @@ foreach ($database->query($sql) as $row)
     }
     
     echo "<td>" . $fskimage . "</td>";
-    echo "<td><a class='button-delete' href=\"pages/deleteentry.php?id=".$row['id']."\">Löschen</a><br>";
+    echo "<td><a class='button-delete' href=\"pages/confirmdelete.php?id=".$row['id']."\">Löschen</a><br>";
     echo "<a class='button-edit' href='pages/editentry.php'>Editieren</a></td>";
     echo "</tr>";
   }
