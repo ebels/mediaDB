@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 Formular to add movie to database
 
 Version 1.0.0
-2016-06-10
+2016-06-15
 **********************************************************************/
 
  include("header.html");
@@ -365,17 +365,17 @@ Version 1.0.0
                     <label class="label-genre">Genre</label><br>
                     <select required name="genre">
                         <option value=""></option>
-                        <option value="action">Action</option>
-                        <option value="drama">Drama</option>
-                        <option value="drama">Dokumentation</option>
-                        <option value="erotik">Erotik</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="kinder">Kinder</option>
-                        <option value="komoedie">Kom&ouml;die</option>
-                        <option value="horror">Horror</option>
-                        <option value="liebe">Liebe</option>
-                        <option value="sciencefiction">Science-Fiction</option>
-                        <option value="thriller">Thriller</option>
+                        <option value="Action">Action</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Dokumentation">Dokumentation</option>
+                        <option value="Erotik">Erotik</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Kinder">Kinder</option>
+                        <option value="Komoedie">Kom&ouml;die</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Liebe">Liebe</option>
+                        <option value="Sciencefiction">Science-Fiction</option>
+                        <option value="Thriller">Thriller</option>
                     </select>
                 </div>
 
