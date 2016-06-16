@@ -1,0 +1,97 @@
+/*********************************************************************
+Modulename: index.css
+Project:    mediaDB
+Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
+
+CSS Style Sheet of index.php (main page of movieDB)
+
+Version 1.0.0
+2016-06-10
+**********************************************************************/
+
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR  MAIN PAGE */
+/* -------------------------------------------------------------------------- */
+
+/*body {
+    background-image: url(../img/background.jpg);
+}*/
+
+/* -------------------------------------------------------------------------- */
+/* ------ BUTTONS ------- */
+.div-wrapper-buttons {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100px;
+}
+
+/* EFFECT FOR ALL BUTTON-DIVS */
+.div-new-entry { 
+    width: 19%;
+    height: 100px;
+}
+
+/* EFFECT FOR ALL BUTTONS */
+.button {
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 22px;
+    text-decoration: none;
+    margin: 15px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+/* EFFECT FOR BUTTON NEW ENTRY */
+.btnnewentry {
+    background-color: #55acee;
+    box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.btnnewentry:hover {
+  background-color: #6FC6FF;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR DIV ENTRY ------- */
+.div-entry {
+    border: solid 1px black;
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+
+.div-title {
+    background-color: yellow;
+}
+
+.div-filminfo {
+    background-color: purple;
+}
+
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR TABLE */
+.table-output{
+    border-collapse: collapse;
+}
+    
+th {
+    background-color: grey;
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+    padding: 8px;
+    text-align: left;
+    width: 10%;
+}
+    
+td {
+    border-bottom: 1px solid #ddd;
+    height: 25px;
+    padding: 8px;
+    text-align: left;
+}
+    
+/* EFFECT: EVERY 2ND (EVEN) ROW COLORED */
+tr:nth-child(even){
+    background-color: #f2f2f2
+}

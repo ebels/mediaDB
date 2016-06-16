@@ -1,0 +1,328 @@
+/*********************************************************************
+Modulename: form.css
+Project:    mediaDB
+Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
+
+CSS Style Sheet of newentry.php (Formular new movie)
+
+Version 1.0.0
+2016-06-10
+**********************************************************************/
+
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR FORMULAR NEW ENTRY PAGE */
+/* -------------------------------------------------------------------------- */
+
+body {
+    /*background-image: url(../img/background.jpg);*/
+}
+
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR TABLE FORM-HEADLINE */
+table {
+    height: 90px;
+    width: 900px;
+    margin: auto;
+}
+
+/* EFFECT FOR ALL TABLEHEADER IN TABLE HEADLINE */
+.th {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 25px;
+    position: relative;
+    vertical-align: bottom;
+}
+
+/* EFFECT FOR TABLEHEADER HEADLINE TEXT */
+.form-headline {
+    text-align: left;
+}
+
+/* EFFECT FOR TABLEHEADER BUTTON BACK */
+.form-buttonback {
+    text-align: right;
+}
+
+/* EFFECT FOR BUTTON BACK IN TABLE HEADER */
+.button-back {
+    padding: 8px 8px;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.button-back:hover {
+    background-color: 	Gainsboro;
+}
+
+/*-----------------------------------------------------------------*/
+/* DIV FOR GREY HORIZONTAL LINE */ 
+.div-formheadline-line {
+    margin: auto;
+    position: relative;
+    width: 900px;
+    height: auto;
+}
+
+/*-----------------------------------------------------------------*/
+/* DIV FOR FORM WITH ALL ENTRIES */
+.div-container-form {
+    margin: auto;
+    position: relative;
+    width: 900px;
+    height: 1100px;
+    border: 1px solid lightgray;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR TEXT BOX, DATE BOX, NUMBER BOX; DROPDOWN BOX, TEXTAREA BOX, LABEL IN FORM */
+input[type="text"] {
+    padding: 8px 8px;
+    line-height: 1px;
+}
+
+input[type="date"] {
+    padding: 8px 8px;
+    line-height: 10px;
+}
+
+select {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    text-align: left;
+    padding: 8px 8px;
+    line-height: 10px; 
+}
+
+input[type="number"] {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    text-align: left;
+    padding: 8px 8px;
+    line-height: 10px;
+}
+
+textarea {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    text-align: left;
+    padding: 8px 8px;
+    line-height: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV FILMTITLE/COVER */
+.div-title-cover {
+    position: relative;
+    margin: 10px auto 0 auto;
+    width: 900px;
+    height: 85px;
+}
+
+/* EFFECT FOR DIV FILMTITLE */
+.div-filmtitle {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    width: 200px;
+    float: left;
+}
+
+/* DIV FILMTITLE MARK AS REQUIRED */
+.div-filmtitle label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+
+/* EFFECT FOR DIV COVER */
+.div-cover {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px auto 0 auto;
+    margin-left: 380px;
+    width: 280px;
+    float: left;
+    overflow:hidden;
+}
+
+/* EFFECT FOR BUTTON UPLOAD COVER */
+.button-cover {
+    line-height: 3  0px;
+    margin: 10px auto 0 auto;
+    font-size: 15px;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV ORIGTITLE */
+.div-origtitle {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin:     10px;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV DATE/COUNTRY */
+.div-datecountry {
+    position: relative;
+    margin: 10px auto 0 auto;
+    width: 900px;
+    height: 85px;
+}
+
+/* EFFECT FOR DIV DATE */
+.div-date {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    width: 200px;
+    float: left;
+}
+
+/* EFFECT FOR DIV COUNTRY */
+.div-country {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px auto 0 auto;
+    margin-left: 20px;
+    width: 500px;
+    float: left;
+    overflow:hidden;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV LENGTH */
+.div-length {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+}
+
+/* DIV LENGTH MARK AS REQUIRED */
+.div-length label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV FSK */
+.div-fsk {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    height: 55px;
+    margin-top: 20px;
+}
+
+/* DIV FSK MARK AS REQUIRED */
+.div-fsk label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV GENRE */
+.div-genre {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    height: 55px;
+    margin-top: 20px;
+}
+
+/* DIV GENRE MARK AS REQUIRED */
+.div-genre label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV ACTOR/DIRECTOR */
+.div-actordirector {
+    position: relative;
+    margin: 20px auto 0 auto;
+    width: 900px;
+    height: 100px;
+}
+
+/* EFFECT FOR DIV ACTOR */
+.div-actors {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    width: 200px;
+    float: left;
+}
+
+/* EFFECT FOR DIV DIRECTOR */
+.div-director {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    margin-left: 170px;
+    width: 500px;
+    float: left;
+    overflow:hidden;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV SUMMERY */
+.div-summery {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    width: 200px;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR DIV LOCATION */
+.div-location {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
+    margin: 10px;
+}
+
+/* DIV LOCATION MARK AS REQUIRED */
+.div-location label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR BUTTON ADD ENTRY */
+.button-addentry {
+    padding: 8px 8px;
+    line-height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: lightgrey;
+}
+
+.button-addentry:hover {
+    background-color: 	Gainsboro;
+}
+
+/*-----------------------------------------------------------------*/
