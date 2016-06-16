@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of header.html
 
 Version 1.0.0
-2016-06-10
+2016-06-16
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -22,12 +22,13 @@ Version 1.0.0
     background-image: url(../img/background.jpg);
 }*/
 
+/* -------------------------------------------------------------------------- */
+/* ------ HEADLINE ------- */
 h1 {
     font-family: 'goodtimes';
     text-align: center;
 }
 
-/* ------ HEADLINE ------- */
 .user-letters{
     color: firebrick;
 }
@@ -36,6 +37,7 @@ h1 {
     color: grey;
 }
 
+/* -------------------------------------------------------------------------- */
 /* ------ HORIZONTAL LINE ------- */
 hr {
     height: 5px;
