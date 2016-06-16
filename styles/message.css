@@ -3,14 +3,14 @@ Modulename: message.css
 Project:    mediaDB
 Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 
-CSS Style Sheet of entryfailed.php, uploadfailed.php, entrysucceed.html
+CSS Style Sheet of entryfailed.php, uploadfailed.php, entrysucceed.html, confirmdelete.php, deletesucceed.html, updatesucceed.html
 
 Version 1.0.0
-2016-06-14
+2016-06-16
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
-/* EFFECT FOR SUCCEEDDED ENTRY PAGE */
+/* EFFECT FOR MESSAGE PAGES */
 /* -------------------------------------------------------------------------- */
 
 /*body {
@@ -25,7 +25,7 @@ label {
 }
 
 /* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR DIV ENTRY SUCCEED ------- */
+/* ------ EFFECT FOR DIV MESSAGE ------- */
 .div {
     font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
     border: solid 1px black;
