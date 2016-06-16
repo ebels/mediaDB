@@ -14,6 +14,8 @@ Version 1.0.0
 // CONNECT TO DATABASE //
 $database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
 
+// -------------------------------------------------------------------------- //
+// GET VALUES //
 $id = $_POST['id'];
 $title = $_POST['filmtitle'];
 $origtitle = $_POST['origtitle'];
@@ -27,8 +29,8 @@ $director = $_POST['director'];
 $summery = $_POST['summery'];
 $location = $_POST['location'];
 
+// -------------------------------------------------------------------------- //
 // WRITE ONLY CHANGED VALUES IN DATABASE //
-
 // UPDATE TITLE //
 if (!empty($title)) {
     $sql = "UPDATE movies SET title='$title' WHERE id=$id";
