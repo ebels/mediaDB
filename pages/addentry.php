@@ -21,9 +21,8 @@ $titleexists=$_POST['filmtitle'];
 $stmt = $database->query("SELECT title FROM movies WHERE title = '$titleexists'");
 
 if($stmt->rowCount() > 0){
-        // SHOW ENTRY FAILED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
+        // SHOW ENTRY FAILED //
         include('entryfailed.html');
-        header("refresh:5;url=../index.php");
     
     } else {
         //CHECK IF USER CHOOSE IMAGE TO UPLOAD //
@@ -49,7 +48,6 @@ if($stmt->rowCount() > 0){
 
             // SHOW ENTRY SUCCEED //
             include('entrysucceed.html');
-            header( "refresh:5;url=../index.php" );
             
         } else {
             //CHECK IF UPLOADED IMAGE IS IMAGE //
@@ -61,7 +59,6 @@ if($stmt->rowCount() > 0){
             // ALLOW IMAGE FILE FORMATS //
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
                 include('uploadfailed.html');
-                header("refresh:5;url=newentry.php");
                 
             } else {
                 //CHECK IF COVER DIRECTORY EXISTS //
@@ -76,7 +73,6 @@ if($stmt->rowCount() > 0){
 
                 } else {
                     include('uploadfailed.html');
-                    header("refresh:5;url=../index.php");
                 }
 
                 // SET IMAGE URL FOR DATABASE ENTRY //
