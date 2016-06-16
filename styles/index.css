@@ -75,7 +75,6 @@ Version 1.0.0
     border-collapse: collapse;
 }
     
-/* -------------------------------------------------------------------------- */
 th {
     background-color: grey;
     border-bottom: 1px solid #ddd;
@@ -85,7 +84,6 @@ th {
     width: 10%;
 }
     
-/* -------------------------------------------------------------------------- */
 td {
     border-bottom: 1px solid #ddd;
     height: 25px;
@@ -93,7 +91,6 @@ td {
     text-align: left;
 }
     
-/* -------------------------------------------------------------------------- */
 /* EFFECT: EVERY 2ND (EVEN) ROW COLORED */
 tr:nth-child(even){
     background-color: #f2f2f2
