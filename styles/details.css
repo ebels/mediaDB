@@ -1,0 +1,80 @@
+/*********************************************************************
+Modulename: details.css
+Project:    mediaDB
+Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
+
+CSS Style Sheet of showdetails.php
+
+Version 1.0.0
+2016-06-16
+**********************************************************************/
+
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR SUCCEEDDED ENTRY PAGE */
+/* -------------------------------------------------------------------------- */
+
+/*body {
+    background-image: url(../img/background.jpg);
+}*/
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR LABEL ------- */
+/*label {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size: 25px;
+}*/
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR DIV WRAPPER ------- */
+.div-wrapper {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    margin: 50px auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR BUTTON BACK ------- */
+.div-buttonback {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    
+    text-align: right;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR DIV MESSAGE ------- */
+.div-details {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    border: solid 1px black;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------*/
+/* ------ EFFCT FOR LINK TO NEW ENTRY ------ */
+.button {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    padding: 8px 8px;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: 	Gainsboro;
+}
