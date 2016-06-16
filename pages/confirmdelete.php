@@ -1,13 +1,13 @@
 <?php
 /*********************************************************************
-Modulename: editentry.php
+Modulename: confirmdelete.php
 Project:    mediaDB
 Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 
-add movie entry to database
+yes / no confirmation to delete movie
 
 Version 1.0.0
-2016-06-14
+2016-06-16
 **********************************************************************/
 
 include("header.html");
