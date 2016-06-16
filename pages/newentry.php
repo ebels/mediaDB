@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 Formular to add movie to database
 
 Version 1.0.0
-2016-06-15
+2016-06-16
 **********************************************************************/
 
  include("header.html");
@@ -21,7 +21,7 @@ Version 1.0.0
     <body>
 
 <!-- -------------------------------------------------------------------------- -->
-<!-- FORM HEADLINE -->
+<!-- FORM HEADLINE AND BUTTON BACK -->
         <table>
             <tr class="th form-headline">
                 <th class="th form-headline">
@@ -46,6 +46,7 @@ Version 1.0.0
             <div class="div-container-form">
                 <br>
 
+<!-- -------------------------------------------------------------------------- -->
                 <!-- FORM FILMTITLE/COVER -->
                 <div class="div-title-cover">      
                     <!-- FORM FILMTITLE -->
@@ -83,7 +84,7 @@ Version 1.0.0
                      </div>
                     <!-- FORM COUNTRY -->
                     <div class="div-country">
-                        <label class="label-country">Land</label><br>
+                        <label class="label-country">Produktionsland</label><br>
                         <select name="country">
                             <option value=""></option>
                             <option value="AF">Afghanistan</option>
