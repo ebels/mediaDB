@@ -35,13 +35,13 @@ if ( $_GET['confirm'] == "yes" ) {
     $database->exec($sql);
     
 } else if ( $_GET[confirm] == "no" ) {
-    // SHOW ENTRY SUCCEED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
+    // REDIRECT TO MAIN PAGE //
     header( "location: ../index.php");
 }
 
 // -------------------------------------------------------------------------- //
-// SHOW DELETE SUCCEED + REDIRECT TO INDEX.HTML AFTER 5 SEC. //
-include('deletesucceed.html');
+// SHOW DELETE SUCCEED  //
+include('../messages/deletesucceed.html');
 
 
 ?>

@@ -49,15 +49,14 @@ if (!empty($origtitle)) {
 // CHECK IF USER CHOOSE IMAGE TO UPLOAD //
 if ($_FILES["cover"]["name"]!="") {
     //CHECK IF UPLOADED IMAGE IS IMAGE //
-    $uploaddir = $_SERVER['DOCUMENT_ROOT'] . "/mediaDB/img/cover/";
+    $uploaddir = $_SERVER['DOCUMENT_ROOT'] . "/mediaDB/images/cover/";
     $uploadfile = $uploaddir . basename($_FILES['cover']['name']);
     
     $imageFileType = pathinfo($uploadfile,PATHINFO_EXTENSION);
 
     // ALLOW IMAGE FILE FORMATS //
     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-        include('uploadfailed.html');
-        header("refresh:5;url=newentry.php");
+        include('../messages/uploadfailed.html');
     } 
 
     // CHECK IF UPLOAD SUCCEEDED //
@@ -65,12 +64,11 @@ if ($_FILES["cover"]["name"]!="") {
         // NOTHING - GO AHEAD TO SET IMAGE URL
                 
     } else {
-        include('uploadfailed.html');
-        header("refresh:5;url=../index.php");
+        include('../messages/uploadfailed.html');
     }
             
     // SET IMAGE URL FOR DATABASE UPDATE //
-    $imgdir="img/cover/";
+    $imgdir="images/cover/";
     $imgurl=$imgdir.$_FILES['cover']['name']; 
    
     $sql = "UPDATE movies SET cover='$imgurl' WHERE id=$id";
@@ -142,6 +140,6 @@ if (!empty ($location)) {
 }
 
 // SHOW UPDATE SUCCEED //
-include('updatesucceed.html');
+include('../messages/updatesucceed.html');
 
 ?>

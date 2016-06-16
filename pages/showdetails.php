@@ -17,8 +17,8 @@ include("header.html");
 <html>
 	<head>
     <title>EMDB</title>
-    <link rel="stylesheet" type="text/css" href="../styles/header.css" />    
-    <link rel="stylesheet" type="text/css" href="../styles/details.css" />
+    <link rel="stylesheet" type="text/css" href="../css/header.css" />    
+    <link rel="stylesheet" type="text/css" href="../css/details.css" />
 	</head>
 </html>
 

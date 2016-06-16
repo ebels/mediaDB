@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 add movie entry to database
 
 Version 1.0.0
-2016-06-10
+2016-06-16
 **********************************************************************/
 
 
@@ -22,7 +22,7 @@ $stmt = $database->query("SELECT title FROM movies WHERE title = '$titleexists'"
 
 if($stmt->rowCount() > 0){
         // SHOW ENTRY FAILED //
-        include('entryfailed.html');
+        include('../messages/entryfailed.html');
     
     } else {
         //CHECK IF USER CHOOSE IMAGE TO UPLOAD //
@@ -47,18 +47,18 @@ if($stmt->rowCount() > 0){
             $newentry->execute($arraynewentry);
 
             // SHOW ENTRY SUCCEED //
-            include('entrysucceed.html');
+            include('../messages/entrysucceed.html');
             
         } else {
             //CHECK IF UPLOADED IMAGE IS IMAGE //
-            $uploaddir = $_SERVER['DOCUMENT_ROOT'] . "/mediaDB/img/cover/";
+            $uploaddir = $_SERVER['DOCUMENT_ROOT'] . "/mediaDB/images/cover/";
             $uploadfile = $uploaddir . basename($_FILES['cover']['name']);
             
             $imageFileType = pathinfo($uploadfile,PATHINFO_EXTENSION);
             
             // ALLOW IMAGE FILE FORMATS //
             if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-                include('uploadfailed.html');
+                include('../messages/uploadfailed.html');
                 
             } else {
                 //CHECK IF COVER DIRECTORY EXISTS //
@@ -72,11 +72,11 @@ if($stmt->rowCount() > 0){
                     // NOTHING - GO AHEAD TO SET IMAGE URL
 
                 } else {
-                    include('uploadfailed.html');
+                    include('../messages/uploadfailed.html');
                 }
 
                 // SET IMAGE URL FOR DATABASE ENTRY //
-                $imgdir="img/cover/";
+                $imgdir="images/cover/";
                 $imgurl=$imgdir.$_FILES['cover']['name']; 
 
                 // ARRAY FOR NEW ENTRY //
@@ -99,7 +99,7 @@ if($stmt->rowCount() > 0){
                 $newentry->execute($arraynewentry);
 
                 // SHOW ENTRY SUCCEED //
-                include('entrysucceed.html');
+                include('../messages/entrysucceed.html');
             }
         }
     }

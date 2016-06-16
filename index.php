@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 main page of mediaDB
 
 Version 1.0.0
-2016-06-15
+2016-06-16
 **********************************************************************/
 
 include ("pages/header.html");
@@ -17,8 +17,8 @@ include ("pages/header.html");
 <html>
 	<head>
     <title>EMDB</title>
-    <link rel="stylesheet" type="text/css" href="styles/header.css" />
-    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
     
 	<body>
@@ -27,7 +27,7 @@ include ("pages/header.html");
 <!-- BUTTONS -->
         <div class="div-wrapper-buttons">
             <div class="div-new-entry">
-                <a class="button btnnewentry" href="pages/newentry.php">Eintrag hinzuf&uuml;gen</a>
+                <a class="button btnnewentry" href="pages/formnewentry.php">Eintrag hinzuf&uuml;gen</a>
             </div>
         </div>
         <hr> 
@@ -71,15 +71,15 @@ foreach ($database->query($sql) as $row)
     
     // SET FSK IMAGE // 
     if ($row['fsk'] == "FSK 0") {
-        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK0.jpg" width="50" height="50"/>';
+        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK0.jpg" width="50" height="50"/>';
     } elseif ($row['fsk'] == "FSK 6") {
-        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK6.jpg" width="50" height="50"/>';
+        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK6.jpg" width="50" height="50"/>';
     } elseif ($row['fsk'] == "FSK 12") {
-        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK12.jpg" width="50" height="50"/>';
+        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK12.jpg" width="50" height="50"/>';
     } elseif ($row['fsk'] == "FSK 16") {
-        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK16.jpg" width="50" height="50"/>';
+        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK16.jpg" width="50" height="50"/>';
     } elseif ($row['fsk'] == "FSK 18") {
-        $fskimage= '<img style="border-width: 0px;" src="img/fsk/FSK18.jpg" width="50" height="50"/>';
+        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK18.jpg" width="50" height="50"/>';
     }
     
     echo "<td>" . $fskimage . "</td>";
