@@ -47,7 +47,7 @@ if($stmt->rowCount() > 0){
             $newentry = $database->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location)");
             $newentry->execute($arraynewentry);
 
-            // SHOW ENTRY SUCCEED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
+            // SHOW ENTRY SUCCEED //
             include('entrysucceed.html');
             header( "refresh:5;url=../index.php" );
             
@@ -102,7 +102,7 @@ if($stmt->rowCount() > 0){
                 $newentry = $database->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location)");
                 $newentry->execute($arraynewentry);
 
-                // SHOW ENTRY SUCCEED + REDIRECT TO INDEX.HTML AFTER 3 SEC. //
+                // SHOW ENTRY SUCCEED //
                 include('entrysucceed.html');
             }
         }
