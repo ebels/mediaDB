@@ -3,10 +3,10 @@ Modulename: formupdate.css
 Project:    mediaDB
 Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 
-CSS Style Sheet of newentry.php (Formular new movie)
+CSS Style Sheet of formupdateentry.php (Formular edit movie)
 
 Version 1.0.0
-2016-06-15
+2016-06-16
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -138,7 +138,6 @@ label {
     border-collapse: collapse;
 }
     
-/*-----------------------------------------------------------------*/
 th {
     background-color: grey;
     border-bottom: 1px solid #ddd;
@@ -147,9 +146,8 @@ th {
     text-align: left;
     width: 10%;
 }
-    
-/*-----------------------------------------------------------------*/
-    td {
+
+td {
     border-bottom: 1px solid #ddd;
     height: 25px;
     padding: 8px;
