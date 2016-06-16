@@ -1,10 +1,10 @@
 <?php
 /*********************************************************************
-Modulename: editentry.php
+Modulename: formupdateentry.php
 Project:    mediaDB
 Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 
-add movie entry to database
+Formular to update movie values
 
 Version 1.0.0
 2016-06-16
@@ -75,6 +75,7 @@ $location=$details['location'];
                         <th>New</th>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->         
                     <!-- FILMTITLE -->
                     <tr>
                         <td class="td-title">Filmtitel</td>
@@ -86,6 +87,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- ORIG. FILMTITLE -->
                     <tr>
                         <td class="td-title">Originaltitel</td>
@@ -97,6 +99,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- COVER IMAGE -->
                     <tr>
                         <td class="td-cover">Cover</td>
@@ -108,6 +111,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- DATE -->
                     <tr>
                         <td class="td-cover">Erscheinungsjahr</td>
@@ -124,10 +128,11 @@ $location=$details['location'];
                           </select>
                         </td>
                     </tr>
-                    
+
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- COUNTRY -->
                     <tr>
-                        <td class="td-country">Land</td>
+                        <td class="td-country">Produktionsland</td>
                         <td>
                             <label class="label-country"><?php echo"$country"?></label><br>
                         </td>
@@ -387,6 +392,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- LENGTH -->
                     <tr>
                         <td class="td-length">Filmlänge</td>
@@ -398,6 +404,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- FSK -->
                     <tr>
                         <td class="td-fsk">Alterfreigabe (FSK)</td>
@@ -415,6 +422,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- GENRE -->
                     <tr>
                         <td class="td-genre">Genre</td>
@@ -439,6 +447,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- ACTORS -->
                     <tr>
                         <td class="td-actors">Darsteller</td>
@@ -450,6 +459,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- DIRECTOR -->
                     <tr>
                         <td class="td-actors">Regisseur</td>
@@ -461,6 +471,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- SUMMERY -->
                     <tr>
                         <td class="td-actors">Zusammenfassung</td>
@@ -472,6 +483,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                     
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- LOCATION -->
                     <tr>
                         <td class="td-location">Standort / Speicherort</td>
