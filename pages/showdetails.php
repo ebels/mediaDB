@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 show movie details
 
 Version 1.0.0
-2016-06-16
+2016-06-17
 **********************************************************************/
 
 include("header.html");
@@ -30,8 +30,9 @@ $database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
 
 // -------------------------------------------------------------------------- //
 // GET VALUES //
-$sql = $database->query("SELECT * FROM movies WHERE title = '$_GET[title]'");
+$sql = $database->query("SELECT * FROM movies WHERE id = '$_GET[id]'");
 $details = $sql->fetch(\PDO::FETCH_ASSOC);
+$id=$details['id'];
 $titel=$details['title'];
 $origtitle=$details['origtitle'];
 $coverimg=$details['cover'];
@@ -44,18 +45,21 @@ $actors=$details['actors'];
 $director=$details['director'];
 $summery=$details['summery'];
 $location=$details['location'];
-
 ?>
 
 <html>
     <body>
         <!-- -------------------------------------------------------------------------- -->
+        <!-- DIV WRAPPER FOR BUTTONS -->
+        <!-- DIV FOR BUTTON BACK -->
+        <div class="div-buttons">
+            <a class='button back' href='../index.php'>zur&uuml;ck zur Hauptseite</a><br><br>
+            <a class="button delete" href="confirmdelete.php?id=<?php echo"$id"?>">Löschen</a><br><br>
+            <a class="button edit" href="formupdateentry.php?id=<?php echo"$id"?>">Editieren</a>
+        </div>
+        <!-- -------------------------------------------------------------------------- -->
         <!-- DIV WRAPPER FOR DETAILS OF MOVIE -->
         <div class="div-wrapper">
-            <!-- DIV FOR BUTTON BACK -->
-            <div class="div-buttonback">
-                <a class='button back' href='../index.php'>zur&uuml;ck zur Hauptseite</a>
-            </div>
             <!-- DIV FOR MOVIE DETAILS -->
             <div class="div-details">
                 <h2><strong><?php echo"$titel"?></strong></h2>
@@ -69,7 +73,7 @@ $location=$details['location'];
                 <p>Darsteller: <?php echo"$actors"?></p>
                 <p>Regisseur: <?php echo"$director"?></p>
                 <p>Zusammenfassung: <?php echo"$summery"?></p>
-                <p>Standort / Speicherort: <?php echo"$location"?></p>
+                <p>Standort / Speicherort: <?php echo"$location"?></p><br>
             </div>
         </div>
     </body>
