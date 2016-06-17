@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 add movie entry to database
 
 Version 1.0.0
-2016-06-16
+2016-06-17
 **********************************************************************/
 
 
@@ -40,10 +40,11 @@ if($stmt->rowCount() > 0){
             $arraynewentry['actors']=$_POST['actors'];
             $arraynewentry['director']=$_POST['director'];
             $arraynewentry['summery']=$_POST['summery'];
-            $arraynewentry['location']=$_POST['location']; 
+            $arraynewentry['location']=$_POST['location'];
+            $arraynewentry['format']=$_POST['format'];
 
             // WRITE NEW ENTRY IN DATABASE //
-            $newentry = $database->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location)");
+            $newentry = $database->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location, format) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location, :format)");
             $newentry->execute($arraynewentry);
 
             // SHOW ENTRY SUCCEED //
@@ -92,10 +93,11 @@ if($stmt->rowCount() > 0){
                 $arraynewentry['actors']=$_POST['actors'];
                 $arraynewentry['director']=$_POST['director'];
                 $arraynewentry['summery']=$_POST['summery'];
-                $arraynewentry['location']=$_POST['location']; 
+                $arraynewentry['location']=$_POST['location'];
+                $arraynewentry['format']=$_POST['format'];
 
                 // WRITE NEW ENTRY IN DATABASE //
-                $newentry = $database->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location)");
+                $newentry = $database->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location, format) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location, :format)");
                 $newentry->execute($arraynewentry);
 
                 // SHOW ENTRY SUCCEED //
