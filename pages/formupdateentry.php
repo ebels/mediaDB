@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 Formular to update movie values
 
 Version 1.0.0
-2016-06-16
+2016-06-17
 **********************************************************************/
 
 include("header.html");
@@ -32,6 +32,7 @@ $actors=$details['actors'];
 $director=$details['director'];
 $summery=$details['summery'];
 $location=$details['location'];
+$format=$details['format'];
 
 ?>
 
@@ -414,6 +415,7 @@ $location=$details['location'];
                                 <option value="FSK 0">FSK 0</option>
                                 <option value="FSK 6">FSK 6</option>
                                 <option value="FSK 12">FSK 12</option>
+                                <option value="FSK 16">FSK 16</option>
                                 <option value="FSK 18">FSK 18</option>
                             </select>
                         </td>
@@ -481,6 +483,23 @@ $location=$details['location'];
                     </tr>
                     
 <!-- -------------------------------------------------------------------------- -->  
+                    <!-- FORMAT -->
+                    <tr>
+                        <td class="td-format">Format</td>
+                        <td>
+                            <label class="label-format"><?php echo"$format"?></label><br>
+                        </td>
+                        <td>
+                            <select name="format">
+                                <option value=""></option>
+                                <option value="Digitale Kopie">Digitale Kopie</option>
+                                <option value="DVD">DVD</option>
+                                <option value="Blu-Ray">Blu-Ray</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+<!-- -------------------------------------------------------------------------- -->  
                     <!-- LOCATION -->
                     <tr>
                         <td class="td-location">Standort / Speicherort</td>
@@ -492,10 +511,7 @@ $location=$details['location'];
                         </td>
                     </tr>
                 </table>
-                
-            
-                
-                
+                    
 <!-- -------------------------------------------------------------------------- -->
                 <!-- FORM BUTTON -->
                 <input class="button-editentry" type="submit" name="submit" value="Film ändern!" />
@@ -506,4 +522,3 @@ $location=$details['location'];
     </body>
 </html>
 
-?>
