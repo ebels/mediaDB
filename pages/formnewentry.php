@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 Formular to add movie to database
 
 Version 1.0.0
-2016-06-16
+2016-06-17
 **********************************************************************/
 
  include("header.html");
@@ -16,7 +16,7 @@ Version 1.0.0
 <!DOCTYPE html>
 <html>
 	<head>  
-    <link rel="stylesheet" type="text/css" href="../css/form.css" />
+    <link rel="stylesheet" type="text/css" href="../css/formnewentry.css" />
 	</head>
     <body>
 
@@ -47,14 +47,14 @@ Version 1.0.0
                 <br>
 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM FILMTITLE/COVER -->
+                <!-- DIV FILMTITLE/COVER -->
                 <div class="div-title-cover">      
-                    <!-- FORM FILMTITLE -->
+                    <!-- DIV FILMTITLE -->
                     <div class="div-filmtitle">
                         <label class="label-filmtitle">Filmtitel</label><br>
                         <input class="input-filmtitle" type="text" name="filmtitle" value="" size="70" maxlength="255" required/>
                     </div>
-                    <!-- FORM COVER -->
+                    <!-- DIV COVER -->
                     <div class="div-cover">
                         <label class="label-cover">Upload a Cover Picture</label><br>
                         <input class="button-cover" type="file" name="cover" value="Upload file" />
@@ -62,16 +62,16 @@ Version 1.0.0
                 </div>
                 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM ORIGINALTITLE -->
+                <!-- DIV ORIGINALTITLE -->
                 <div class="div-origtitle">
                     <label class="label-origtitle">Originaltitel</label><br>
                     <input class="input-origtitle" type="text" name="origtitle" value="" size="70" maxlength="255"/>
                 </div>
                 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM DATE/COUNTRY -->
+                <!-- DIV DATE/COUNTRY -->
                 <div class="div-datecountry">      
-                    <!-- FORM DATE -->
+                    <!-- DIV DATE -->
                       <div class="div-date">
                          <label class="label-date">Erscheinungsjahr</label><br>
                          <select name="date">
@@ -82,7 +82,7 @@ Version 1.0.0
                             ?>
                           </select>
                      </div>
-                    <!-- FORM COUNTRY -->
+                    <!-- DIV COUNTRY -->
                     <div class="div-country">
                         <label class="label-country">Produktionsland</label><br>
                         <select name="country">
@@ -338,14 +338,14 @@ Version 1.0.0
                 </div>
                 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM LENGTH -->
+                <!-- DIV LENGTH -->
                 <div class="div-length">
                     <label class="label-length">Filml&auml;nge (Minuten)</label><br>
                     <input class="input-length" type="number" name="length" value="" size="30" maxlength="10" required/>
                 </div>
 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM FSK -->
+                <!-- DIV FSK -->
                 <div class="div-fsk">
                     <label class="label-fsk">Altersfreigabe (FSK)</label><br>
                     <select required name="fsk">
@@ -353,12 +353,13 @@ Version 1.0.0
                         <option value="FSK 0">FSK 0</option>
                         <option value="FSK 6">FSK 6</option>
                         <option value="FSK 12">FSK 12</option>
+                        <option value="FSK 16">FSK 16</option>
                         <option value="FSK 18">FSK 18</option>
                     </select>
                 </div>
 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM GENRE -->
+                <!-- DIV GENRE -->
                 <div class="div-genre">
                     <label class="label-genre">Genre</label><br>
                     <select required name="genre">
@@ -378,14 +379,14 @@ Version 1.0.0
                 </div>
 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM ACTORS/DIRECTOR -->
+                <!-- DIV ACTORS/DIRECTOR -->
                 <div class="div-actordirector">      
-                    <!-- FORM ACTORS -->
+                    <!-- DIV ACTORS -->
                     <div class="div-actors">
                         <label class="label-actors">Darsteller</label><br>
                         <textarea class="textarea-actors" type="text" name="actors" value="" cols="40" rows="10"></textarea>
                     </div>
-                    <!-- FORM DIRECTOR -->
+                    <!-- DIV DIRECTOR -->
                     <div class="div-director">
                         <label class="label-director">Regisseur</label><br>
                         <input class="input-director" type="text" name="director" value="" size="50" maxlength="255"/>
@@ -393,23 +394,36 @@ Version 1.0.0
                 </div>
 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM SUMMERY -->
+                <!-- DIV SUMMERY -->
                 <div class="div-summery">
                     <label class="label-summery">Zusammenfassung</label><br>
                     <textarea class="textarea-summery" type="text" name="summery" value="" cols="50" rows="20"></textarea>
                 </div>
 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM LOCATION -->
-                <div class="div-location">
-                    <label class="label-location">Standort / Speicherort</label><br>
-                    <input class="input-location" type="text" name="location" value="" size="40" maxlength="40" required/>
-                    <br>
-                    <br>
-                </div>
+                <!-- DIV FORMAT / LOCATION -->
+                <div class="format-location">
+                    <!-- DIV FORMAT -->
+                    <div class="div-format">
+                        <label class="label-format">Format</label><br>
+                        <select required name="format">
+                            <option value=""></option>
+                            <option value="Digitale Kopie">Digitale Kopie</option>
+                            <option value="DVD">DVD</option>
+                            <option value="Blu-Ray">Blu-Ray</option>
+                        </select>
+                    </div>
+                    <!-- DIV LOCATION -->
+                    <div class="div-location">
+                        <label class="label-location">Standort / Speicherort</label><br>
+                        <input class="input-location" type="text" name="location" value="" size="40" maxlength="40" required/>
+                        <br>
+                        <br>
+                    </div>
+                </div><br><br>
 
 <!-- -------------------------------------------------------------------------- -->
-                <!-- FORM BUTTON -->
+                <!-- BUTTON SUBMIT -->
                 <input class="button-addentry" type="submit" name="submit" value="Film eintragen!" />
             </div>
         </form>
