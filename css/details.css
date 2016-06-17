@@ -25,10 +25,20 @@ Version 1.0.0
 }*/
 
 /* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR BUTTONS ------- */
+.div-buttons {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: right;
+    width: 40%;
+}
+
+/* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIV WRAPPER ------- */
 .div-wrapper {
     font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    margin: 50px auto;
+    margin: 10px auto;
     padding: 10px;
     background: #fff;
     border-radius: 5px;
@@ -37,19 +47,7 @@ Version 1.0.0
 }
 
 /* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR BUTTON BACK ------- */
-.div-buttonback {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    margin: auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    
-    text-align: right;
-}
-
-/* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR DIV MESSAGE ------- */
+/* ------ EFFECT FOR DIV DETAILS ------- */
 .div-details {
     font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
     border: solid 1px black;
@@ -57,12 +55,11 @@ Version 1.0.0
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    
     text-align: center;
 }
 
 /*-----------------------------------------------------------------*/
-/* ------ EFFCT FOR LINK TO NEW ENTRY ------ */
+/* ------ EFFECT FOR BUTTONS ------ */
 .button {
     font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
     padding: 8px 8px;
