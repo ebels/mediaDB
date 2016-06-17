@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of index.php (main page of movieDB)
 
 Version 1.0.0
-2016-06-10
+2016-06-17
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -55,21 +55,6 @@ Version 1.0.0
 }
 
 /* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR DIV ENTRY ------- */
-.div-entry {
-    border: solid 1px black;
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-}
-
-.div-title {
-    background-color: yellow;
-}
-
-.div-filminfo {
-    background-color: purple;
-}
-
-/* -------------------------------------------------------------------------- */
 /* EFFECT FOR TABLE */
 .table-output{
     border-collapse: collapse;
@@ -94,4 +79,49 @@ td {
 /* EFFECT: EVERY 2ND (EVEN) ROW COLORED */
 tr:nth-child(even){
     background-color: #f2f2f2
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR DIV COVER ------- */
+.div-wrapper-movies {
+    width:1100px;
+    height:auto;
+    text-align:center;
+    margin:0 auto;
+}
+
+.div-cover {
+    float: left;
+    width:220px;
+    height:auto;
+}
+
+p {
+    height: 10px;
+}
+
+.title, .genre {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.genre {
+    color: #999;
+    font-size: 12px;
+}
+
+img {
+    border-width: 0px;
+    width: 182px;
+    height: 268px;
+    border-radius: 5px;
 }
