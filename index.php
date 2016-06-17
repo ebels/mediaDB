@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 main page of mediaDB
 
 Version 1.0.0
-2016-06-16
+2016-06-17
 **********************************************************************/
 
 include ("pages/header.html");
@@ -50,13 +50,12 @@ $sql= 'SELECT * FROM movies';
 
 // -------------------------------------------------------------------------- //
 // TABLE FOR OUTPUT //
-echo "<table class='table-output' align=center>
+/*echo "<table class='table-output' align=center>
     <tr>
     <th>Cover</th>
     <th>Filmtitel</th>
     <th>Standort</th>
     <th>Altersfreigabe (FSK)</th>
-    <th></th>
     </tr>";
 
 // -------------------------------------------------------------------------- //
@@ -83,11 +82,27 @@ foreach ($database->query($sql) as $row)
     }
     
     echo "<td>" . $fskimage . "</td>";
-    echo "<td><a class='button-delete' href='pages/confirmdelete.php?id=$row[id]'>Löschen</a><br>";
-    echo "<a class='button-edit' href='pages/formupdateentry.php?id=$row[id]'>Editieren</a></td>";
     echo "</tr>";
   }
    
-echo "</table>";
+echo "</table>";*/
 
+
+// -------------------------------------------------------------------------- //
+// DIV WRAPPER FOR ALL MOVIE COVERS //
+echo "<div class='div-wrapper-movies'>";
+
+// -------------------------------------------------------------------------- //
+// DISPLAY ENTRIES OF DATABASE IN COVER STYLE //
+foreach ($database->query($sql) as $row)
+  {
+    $img=$row['cover'];
+    echo "<div class='div-cover'>
+            <a href=pages/showdetails.php?id=$row[id]><img src='$img'/></a>
+            <span class='title'>$row[title]</span><br>
+            <span class='genre'>$row[genre]</span><br><br>
+    </div>";
+  }
+
+echo "</div>";
 ?>
