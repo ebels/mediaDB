@@ -25,13 +25,17 @@ if($stmt->rowCount() > 0){
         include('../messages/entryfailed.html');
     
     } else {
-        //CHECK IF USER CHOOSE IMAGE TO UPLOAD //
+        // CHECK IF USER CHOOSE IMAGE TO UPLOAD //
+    
+        // SET STANDARD COVER IMAGE // 
+        $stdimg = " images/stdcover.png";
+    
         if ($_FILES["cover"]["name"]=="") {
-            // ARRAY FOR NEW ENTRY WITHOUT IMAGE //
+            // ARRAY FOR NEW ENTRY WITH STANDARD IMAGE //
             $arraynewentry = array();
             $arraynewentry['title']=$_POST['filmtitle'];
             $arraynewentry['origtitle']=$_POST['origtitle'];
-            $arraynewentry['cover']="/mediaDB/img/dvd.png"; // SET DEFAULT IMAGE //
+            $arraynewentry['cover']=$stdimg; // SET DEFAULT IMAGE //
             $arraynewentry['date']=$_POST['date'];
             $arraynewentry['country']=$_POST['country'];
             $arraynewentry['length']=$_POST['length'];
