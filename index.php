@@ -45,47 +45,8 @@ include ("pages/header.html");
 $database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
 
 // -------------------------------------------------------------------------- //
-// SQLQUERY //
-$sql= 'SELECT * FROM movies';
-
-// -------------------------------------------------------------------------- //
-// TABLE FOR OUTPUT //
-/*echo "<table class='table-output' align=center>
-    <tr>
-    <th>Cover</th>
-    <th>Filmtitel</th>
-    <th>Standort</th>
-    <th>Altersfreigabe (FSK)</th>
-    </tr>";
-
-// -------------------------------------------------------------------------- //
-// DISPLAY ENTRIES OF DATABASE IN TABLE STYLE //
-foreach ($database->query($sql) as $row)
-  {
-    $img=$row['cover'];
-    echo "<tr>";
-    echo "<td><img style='border-width: 0px;' src='$img' width='80' height='114'/>"; // SET COVER IMAGE //
-    echo "<td><a class='link-title' href='pages/showdetails.php?title=$row[title]'.>$row[title]</a></td>";
-    echo "<td>" . $row['location'] . "</td>";
-    
-    // SET FSK IMAGE // 
-    if ($row['fsk'] == "FSK 0") {
-        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK0.jpg" width="50" height="50"/>';
-    } elseif ($row['fsk'] == "FSK 6") {
-        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK6.jpg" width="50" height="50"/>';
-    } elseif ($row['fsk'] == "FSK 12") {
-        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK12.jpg" width="50" height="50"/>';
-    } elseif ($row['fsk'] == "FSK 16") {
-        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK16.jpg" width="50" height="50"/>';
-    } elseif ($row['fsk'] == "FSK 18") {
-        $fskimage= '<img style="border-width: 0px;" src="images/fsk/FSK18.jpg" width="50" height="50"/>';
-    }
-    
-    echo "<td>" . $fskimage . "</td>";
-    echo "</tr>";
-  }
-   
-echo "</table>";*/
+// SQLQUERY ORDER BY TITLE //
+$sql= 'SELECT * FROM movies ORDER BY title';
 
 
 // -------------------------------------------------------------------------- //
@@ -97,9 +58,10 @@ echo "<div class='div-wrapper-movies'>";
 foreach ($database->query($sql) as $row)
   {
     $img=$row['cover'];
+    $shorttitle=substr($row['title'],0,24);
     echo "<div class='div-cover'>
             <a href=pages/details.php?id=$row[id]><img src='$img'/></a>
-            <span class='title'>$row[title]</span><br>
+            <span class='title'>$shorttitle</span><br>
             <span class='genre'>$row[genre]</span><br><br>
     </div>";
   }
