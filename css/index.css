@@ -55,33 +55,6 @@ Version 1.0.0
 }
 
 /* -------------------------------------------------------------------------- */
-/* EFFECT FOR TABLE */
-.table-output{
-    border-collapse: collapse;
-}
-    
-th {
-    background-color: grey;
-    border-bottom: 1px solid #ddd;
-    height: 30px;
-    padding: 8px;
-    text-align: left;
-    width: 10%;
-}
-    
-td {
-    border-bottom: 1px solid #ddd;
-    height: 25px;
-    padding: 8px;
-    text-align: left;
-}
-    
-/* EFFECT: EVERY 2ND (EVEN) ROW COLORED */
-tr:nth-child(even){
-    background-color: #f2f2f2
-}
-
-/* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIV COVER ------- */
 .div-wrapper-movies {
     width:1100px;
