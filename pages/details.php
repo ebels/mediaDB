@@ -67,8 +67,8 @@ $location=$details['location'];
                 <?php echo "<img style='border-width: 0px;' src='../$coverimg' width='80' height='114'/><br>"?><br>
                 <p>Erscheinungsjahr: <?php echo"$date"?></p>
                 <p>Produktionsland: <?php echo"$country"?></p>
-                <p>Filmlänge: <?php echo"$length"?></p>
-                <p>Altersfreigabe (FSK): <?php echo"$fsk"?>Minuten</p>
+                <p>Filmlänge: <?php echo"$length"?>Minuten</p>
+                <p>Altersfreigabe (FSK): <?php echo"$fsk"?></p>
                 <p>Genre: <?php echo"$genre"?></p>
                 <p>Darsteller: <?php echo"$actors"?></p>
                 <p>Regisseur: <?php echo"$director"?></p>
