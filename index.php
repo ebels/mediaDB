@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 main page of mediaDB
 
 Version 1.0.0
-2016-06-17
+2016-06-20
 **********************************************************************/
 
 include ("pages/header.html");
@@ -98,7 +98,7 @@ foreach ($database->query($sql) as $row)
   {
     $img=$row['cover'];
     echo "<div class='div-cover'>
-            <a href=pages/showdetails.php?id=$row[id]><img src='$img'/></a>
+            <a href=pages/details.php?id=$row[id]><img src='$img'/></a>
             <span class='title'>$row[title]</span><br>
             <span class='genre'>$row[genre]</span><br><br>
     </div>";
