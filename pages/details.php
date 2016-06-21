@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 show movie details
 
 Version 1.0.0
-2016-06-20
+2016-06-21
 **********************************************************************/
 
 include("header.html");
@@ -45,36 +45,71 @@ $actors=$details['actors'];
 $director=$details['director'];
 $summery=$details['summery'];
 $location=$details['location'];
+$format=$details['format'];
+
+
+if ($fsk == "FSK 0") {
+    $imgfsk = "../images/fsk/FSK0.jpg";
+} elseif ($fsk == "FSK 6") {
+    $imgfsk = "../images/fsk/FSK6.jpg";
+} elseif ($fsk == "FSK 12") {
+    $imgfsk = "../images/fsk/FSK12.jpg";
+}elseif ($fsk == "FSK 16") {
+    $imgfsk = "../images/fsk/FSK16.jpg";
+}else {
+    $imgfsk = "../images/fsk/FSK18.jpg";
+}
 ?>
 
 <html>
     <body>
         <!-- -------------------------------------------------------------------------- -->
-        <!-- DIV WRAPPER FOR BUTTONS -->
         <!-- DIV FOR BUTTON BACK -->
         <div class="div-buttons">
             <a class='button back' href='../index.php'>zur&uuml;ck zur Hauptseite</a><br><br>
-            <a class="button delete" href="confirm.php?id=<?php echo"$id"?>">Löschen</a><br><br>
-            <a class="button edit" href="formupdateentry.php?id=<?php echo"$id"?>">Editieren</a>
         </div>
+        
         <!-- -------------------------------------------------------------------------- -->
-        <!-- DIV WRAPPER FOR DETAILS OF MOVIE -->
+        <!-- DIV WRAPPER MOVIE CARD -->
         <div class="div-wrapper">
-            <!-- DIV FOR MOVIE DETAILS -->
-            <div class="div-details">
-                <h2><strong><?php echo"$titel"?></strong></h2>
-                <p><?php echo"$origtitle"?></p><br>
-                <?php echo "<img style='border-width: 0px;' src='../$coverimg' width='80' height='114'/><br>"?><br>
-                <p>Erscheinungsjahr: <?php echo"$date"?></p>
-                <p>Produktionsland: <?php echo"$country"?></p>
-                <p>Filmlänge: <?php echo"$length"?>Minuten</p>
-                <p>Altersfreigabe (FSK): <?php echo"$fsk"?></p>
-                <p>Genre: <?php echo"$genre"?></p>
-                <p>Darsteller: <?php echo"$actors"?></p>
-                <p>Regisseur: <?php echo"$director"?></p>
-                <p>Zusammenfassung: <?php echo"$summery"?></p>
-                <p>Standort / Speicherort: <?php echo"$location"?></p><br>
+            
+            <!-- DIV FOR IMAGES -->
+            <div class="div-images">
+                <img class="img-cover" src="<?php echo "../$coverimg" ?>"/><br><br>
+                <label class="label-border">Genre: <?php echo "$genre" ?></label><br><br>
+                <label class="label-border">Format: <?php echo "$format" ?><br>
+                Standort: <?php echo "$location" ?></label><br><br>
             </div>
-        </div>
+            
+            <!-- DIV FOR DETAILS -->
+            <div class="div-details">
+                <div class="div-title">
+                    <label class="label-title"><?php echo "$titel" ?></label><br>
+                    <label><?php echo "$origtitle" ?></label>
+                </div>
+                
+                <div class="div-fsk">
+                    <img class="img-fsk" src="<?php echo "$imgfsk" ?>"/>
+                </div>
+                
+                <br><hr class="hr-detail"><br>
+                
+                <label class="label-bold">Filmlänge: </label><?php echo "$length" ?> min.<br>
+                <label class="label-bold">Filmstart: </label><?php echo "$date"?> (<?php echo"$country" ?>)<br><br>
+                <label class="label-bold">Regisseur: </label><?php echo "$director" ?><br>
+                <label class="label-bold">Darsteller: </label><?php echo "$actors" ?>
+                <br><br><hr class="hr-detail"><br>
+                
+                <label class="label-bold">Zusammenfassung:</label><br>
+                <label><?php echo "$summery" ?></label>
+                <br><br><hr class="hr-detail"><br>
+                
+                <div class="div-buttonsedit">
+                    <a class="button delete" href="confirm.php?id=<?php echo"$id"?>">Löschen</a>
+                    <a class="button edit" href="formupdateentry.php?id=<?php echo"$id"?>">Editieren</a>
+                </div>
+                <br>
+            </div> <!-- DETAILS -->
+        </div> <!-- WRAPPER -->
     </body>
 </html>
