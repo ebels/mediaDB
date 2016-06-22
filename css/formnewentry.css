@@ -6,113 +6,69 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of newentry.php (Formular new movie)
 
 Version 1.0.0
-2016-06-10
+2016-06-22
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
-/* EFFECT FOR FORMULAR NEW ENTRY PAGE */
+/* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
 /* -------------------------------------------------------------------------- */
 
-body {
-    /*background-image: url(../img/background.jpg);*/
-}
+/* -------------------------------------------------------------------------- */
+/* ------ IMPORT FONT ------- */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 
 
-/*-----------------------------------------------------------------*/
-/* EFFECT FOR TABLE FORM-HEADLINE */
-table {
-    height: 90px;
-    width: 900px;
-    margin: auto;
-}
-
-/* EFFECT FOR ALL TABLEHEADER IN TABLE HEADLINE */
-.th {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 25px;
-    position: relative;
-    vertical-align: bottom;
-}
-
-/* EFFECT FOR TABLEHEADER HEADLINE TEXT */
-.form-headline {
-    text-align: left;
-}
-
-/* EFFECT FOR TABLEHEADER BUTTON BACK */
-.form-buttonback {
-    text-align: right;
-}
-
-/* EFFECT FOR BUTTON BACK IN TABLE HEADER */
-.button-back {
-    padding: 8px 8px;
-    line-height: 20px;
-    border-radius: 5px;
-    font-size: 15px;
-    background-color: lightgrey;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-}
-
-.button-back:hover {
-    background-color: 	Gainsboro;
-}
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
+/* -------------------------------------------------------------------------- */
 
 /*-----------------------------------------------------------------*/
 /* DIV FOR GREY HORIZONTAL LINE */ 
-.div-formheadline-line {
+.div-headline {
+    font-family: 'Raleway', sans-serif;
     margin: auto;
-    position: relative;
+    position: absolute;
     width: 900px;
     height: auto;
+    top:250px;
+    left: 0;
+    right: 0;
+    font-size: 30px;
 }
 
 /*-----------------------------------------------------------------*/
 /* DIV FOR FORM WITH ALL ENTRIES */
 .div-container-form {
     margin: auto;
-    position: relative;
     width: 900px;
     height: 1100px;
     border: 1px solid lightgray;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 20px;
+    position: absolute;
+    top: 320px;
+    left: 0;
+    right: 0;
 }
 
 /*-----------------------------------------------------------------*/
 /* EFFECT FOR TEXT BOX, DATE BOX, NUMBER BOX; DROPDOWN BOX, TEXTAREA BOX, LABEL IN FORM */
-input[type="text"] {
+input[type="text"], input[type="date"] {
     padding: 8px 8px;
     line-height: 1px;
 }
 
-input[type="date"] {
-    padding: 8px 8px;
-    line-height: 10px;
-}
-
-select {
+select, input[type="number"], textarea {
     font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
     text-align: left;
     padding: 8px 8px;
     line-height: 10px; 
 }
 
-input[type="number"] {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    text-align: left;
-    padding: 8px 8px;
-    line-height: 10px;
-}
-
-textarea {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    text-align: left;
-    padding: 8px 8px;
-    line-height: 10px;
-}
-
 label {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 16px;
+    text-align: left;
     font-weight: bold;
 }
 
@@ -127,9 +83,6 @@ label {
 
 /* EFFECT FOR DIV FILMTITLE */
 .div-filmtitle {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
     width: 200px;
     float: left;
@@ -144,9 +97,6 @@ label {
 
 /* EFFECT FOR DIV COVER */
 .div-cover {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px auto 0 auto;
     margin-left: 380px;
     width: 280px;
@@ -164,10 +114,7 @@ label {
 /*-----------------------------------------------------------------*/
 /* EFFECT FOR DIV ORIGTITLE */
 .div-origtitle {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
-    margin:     10px;
+    margin: 10px;
 }
 
 /*-----------------------------------------------------------------*/
@@ -181,9 +128,6 @@ label {
 
 /* EFFECT FOR DIV DATE */
 .div-date {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
     width: 200px;
     float: left;
@@ -191,9 +135,6 @@ label {
 
 /* EFFECT FOR DIV COUNTRY */
 .div-country {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px auto 0 auto;
     margin-left: 20px;
     width: 500px;
@@ -204,9 +145,6 @@ label {
 /*-----------------------------------------------------------------*/
 /* EFFECT FOR DIV LENGTH */
 .div-length {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
 }
 
@@ -220,9 +158,6 @@ label {
 /*-----------------------------------------------------------------*/
 /* EFFECT FOR DIV FSK */
 .div-fsk {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
     height: 55px;
     margin-top: 20px;
@@ -238,9 +173,6 @@ label {
 /*-----------------------------------------------------------------*/
 /* EFFECT FOR DIV GENRE */
 .div-genre {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
     height: 55px;
     margin-top: 20px;
@@ -264,9 +196,6 @@ label {
 
 /* EFFECT FOR DIV ACTOR */
 .div-actors {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
     width: 200px;
     float: left;
@@ -274,9 +203,6 @@ label {
 
 /* EFFECT FOR DIV DIRECTOR */
 .div-director {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
     margin-left: 170px;
     width: 500px;
@@ -287,9 +213,6 @@ label {
 /*-----------------------------------------------------------------*/
 /* EFFECT FOR DIV SUMMERY */
 .div-summery {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
     width: 200px;
 }
@@ -305,9 +228,6 @@ label {
 
 /* EFFECT FOR DIV FORMAT */
 .div-format {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px;
     width: 200px;
     float: left;
@@ -322,9 +242,6 @@ label {
 
 /* EFFECT FOR DIV LOCATION */
 .div-location {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 16px;
-    text-align: left;
     margin: 10px auto 0 auto;
     margin-left: 20px;
     width: 500px;
@@ -341,17 +258,19 @@ label {
 
 /*-----------------------------------------------------------------*/
 /* EFFECT FOR BUTTON ADD ENTRY */
-.button-addentry {
+.addentry {
     padding: 8px 8px;
     line-height: 30px;
     margin: 10px;
     border-radius: 5px;
     font-size: 25px;
     background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
 }
 
-.button-addentry:hover {
+.addentry:hover {
     background-color: 	Gainsboro;
 }
-
 /*-----------------------------------------------------------------*/
