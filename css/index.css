@@ -6,92 +6,67 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of index.php (main page of movieDB)
 
 Version 1.0.0
-2016-06-20
+2016-06-22
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
-/* EFFECT FOR  MAIN PAGE */
+/* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
 /* -------------------------------------------------------------------------- */
 
-/*body {
-    background-image: url(../img/background.jpg);
-}*/
+/* -------------------------------------------------------------------------- */
+/* ------ IMPORT FONT ------- */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
 
 /* -------------------------------------------------------------------------- */
-/* ------ BUTTONS ------- */
-.div-wrapper-buttons {
-    position: relative;
-    margin: auto;
-    width: 100%;
-    height: 100px;
-}
+/* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
+/* -------------------------------------------------------------------------- */
 
-/* EFFECT FOR ALL BUTTON-DIVS */
-.div-new-entry { 
-    width: 19%;
-    height: 100px;
-}
-
-/* EFFECT FOR ALL BUTTONS */
-.button {
-    border-radius: 5px;
-    padding: 15px 25px;
-    font-size: 22px;
-    text-decoration: none;
-    margin: 15px;
-    color: #fff;
-    position: relative;
-    display: inline-block;
-}
-
-/* EFFECT FOR BUTTON NEW ENTRY */
-.btnnewentry {
-    background-color: #55acee;
-    box-shadow: 0px 5px 0px 0px #3C93D5;
-}
-
-.btnnewentry:hover {
-  background-color: #6FC6FF;
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR WRAPPER DIV COVER ------- */
+.div-wrapper-movies {
+    width: 60%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    background: lightgrey;
+    position: absolute;
+    top: 185px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
 }
 
 /* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIV COVER ------- */
-.div-wrapper-movies {
-    width:1100px;
-    height:auto;
-    text-align:center;
-    margin:0 auto;
-}
-
 .div-cover {
     float: left;
-    width:220px;
-    height:auto;
+    width: 220px;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 9px;
 }
 
-p {
-    height: 10px;
-}
-
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR TITLE + GENRE SPAN ------- */
 .title, .genre {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    cursor: default;
 }
 
 .title {
     font-weight: bold;
     font-size: 15px;
-    margin-bottom: 4px;
 }
 
 .genre {
     color: #999;
-    font-size: 12px;
+    font-size: 14px;
 }
 
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR IMAGES IN DIV COVER ------- */
 img {
     border-width: 0px;
     width: 182px;
