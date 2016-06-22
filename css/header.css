@@ -6,41 +6,91 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of header.html
 
 Version 1.0.0
-2016-06-16
+2016-06-22
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
-/* EFFECT FOR HEADER */
+/* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
 /* -------------------------------------------------------------------------- */
 
-@font-face {
-    font-family: 'goodtimes';
-    src: url('../fonts/goodtimesrg.ttf') format('truetype');
-}
+/* -------------------------------------------------------------------------- */
+/* ------ IMPORT FONT ------- */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 
-/*body {
-    background-image: url(../img/background.jpg);
-}*/
 
 /* -------------------------------------------------------------------------- */
-/* ------ HEADLINE ------- */
-h1 {
-    font-family: 'goodtimes';
-    text-align: center;
-}
+/* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
+/* -------------------------------------------------------------------------- */
 
-.user-letters{
-    color: firebrick;
-}
-
-.database-letters {
-    color: grey;
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR WHOLE DIV HEADER ------- */
+.div-header {
+    height: 185px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: black;
 }
 
 /* -------------------------------------------------------------------------- */
-/* ------ HORIZONTAL LINE ------- */
-hr {
-    height: 5px;
-    background-color: grey;
-    border-width: 0;
+/* ------ EFFECT FOR HEADLINE SPAN ------- */
+.headline {
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    float: left;
+    width: 20%;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 385px;
+    right: 0;
+    transform: translate(-0%,-50%);
+    color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR WRAPPER DIV BUTTONS ------- */
+.div-buttons {
+    width: 15%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    right: 675px;
+    transform: translate(+100%,-50%);
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR PARTICULAR BUTTON ------- */
+.home, .new {
+    float: left;
+}
+
+.new {
+    margin-left: 35px;
+}
+
+.about {
+    float: right;
+    margin-left: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR ALL BUTTONS ------ */
+.button {
+    font-family: 'Raleway', sans-serif;
+    padding: 8px 8px;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: 	white;
 }
