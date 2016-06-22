@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 Formular to add movie to database
 
 Version 1.0.0
-2016-06-20
+2016-06-22
 **********************************************************************/
 
  include("header.html");
@@ -22,20 +22,8 @@ Version 1.0.0
 
 <!-- -------------------------------------------------------------------------- -->
 <!-- FORM HEADLINE AND BUTTON BACK -->
-        <table>
-            <tr class="th form-headline">
-                <th class="th form-headline">
-                    Neuer Film hinzuf&uuml;gen
-                </th>
-                
-                <!-- BUTTON BACK TO MAIN -->
-                <th class="th form-buttonback">
-                    <a class="button-back" href="../index.php">zur&uuml;ck zur Hauptseite</a>
-                </th>
-            </tr>
-        </table>
-        
-        <div class="div-formheadline-line">
+        <div class="div-headline">
+            <span>Neuer Film hinzuf&uuml;gen</span>
             <hr>
         </div>
         
@@ -416,7 +404,7 @@ Version 1.0.0
 
 <!-- -------------------------------------------------------------------------- -->
                 <!-- BUTTON SUBMIT -->
-                <input class="button-addentry" type="submit" name="submit" value="Film eintragen!" />
+                <input class="button addentry" type="submit" name="submit" value="Film eintragen!" />
             </div>
         </form>
         
