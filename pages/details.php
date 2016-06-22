@@ -16,17 +16,22 @@ include("header.html");
 <!DOCTYPE html>
 <html>
 	<head>
-    <title>EMDB</title>
     <link rel="stylesheet" type="text/css" href="../css/header.css" />    
     <link rel="stylesheet" type="text/css" href="../css/details.css" />
 	</head>
 </html>
 
 <?php
+// -------------------------------------------------------------------------- //
+// DATABASE CONNECTION VARIABLES //
+$dbhost='localhost';
+$dbname='mediadb';
+$dbusername='root';
+$dbpw='';
 
 // -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //
-$database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
+$database = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpw);
 
 // -------------------------------------------------------------------------- //
 // GET VALUES //
@@ -47,7 +52,8 @@ $summery=$details['summery'];
 $location=$details['location'];
 $format=$details['format'];
 
-
+// -------------------------------------------------------------------------- //
+// SET FSK IMAGE //
 if ($fsk == "FSK 0") {
     $imgfsk = "../images/fsk/FSK0.jpg";
 } elseif ($fsk == "FSK 6") {
@@ -64,20 +70,14 @@ if ($fsk == "FSK 0") {
 <html>
     <body>
         <!-- -------------------------------------------------------------------------- -->
-        <!-- DIV FOR BUTTON BACK -->
-        <div class="div-buttons">
-            <a class='button back' href='../index.php'>zur&uuml;ck zur Hauptseite</a><br><br>
-        </div>
-        
-        <!-- -------------------------------------------------------------------------- -->
         <!-- DIV WRAPPER MOVIE CARD -->
         <div class="div-wrapper">
             
             <!-- DIV FOR IMAGES -->
             <div class="div-images">
                 <img class="img-cover" src="<?php echo "../$coverimg" ?>"/><br><br>
-                <label class="label-border">Genre: <?php echo "$genre" ?></label><br><br>
-                <label class="label-border">Format: <?php echo "$format" ?><br>
+                <label class="label-frame">Genre: <?php echo "$genre" ?></label><br><br>
+                <label class="label-frame">Format: <?php echo "$format" ?><br>
                 Standort: <?php echo "$location" ?></label><br><br>
             </div>
             
