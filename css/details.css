@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of showdetails.php
 
 Version 1.0.0
-2016-06-21
+2016-06-22
 **********************************************************************/
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
@@ -22,34 +22,6 @@ Version 1.0.0
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR DIV BUTTONS (BACK TO MAIN PAGE) ------- */
-.div-buttons {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    margin: 20px auto;
-    padding: 10px;
-    text-align: right;
-    width: 50%;
-}
-
-/* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR BUTTONS (BACK TO MAIN PAGE, EDIT, DELETE) ------ */
-.button {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    padding: 8px 8px;
-    line-height: 20px;
-    border-radius: 5px;
-    font-size: 20px;
-    background-color: lightgrey;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-}
-
-.button:hover {
-    background-color: 	Gainsboro;
-}
-
-/* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIV WRAPPER ------- */
 .div-wrapper {
     font-family: 'Raleway', sans-serif;
@@ -59,6 +31,10 @@ Version 1.0.0
     border-radius: 20px;
     width: 50%;
     overflow: auto;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -113,7 +89,7 @@ Version 1.0.0
 
 /* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIFFERENT LABELS ------- */
-.label-border {
+.label-frame {
     border: 1px solid black;
     padding: 8px 8px;
     line-height: 20px;
