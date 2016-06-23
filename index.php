@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 main page of mediaDB - show all database entries
 
 Version 1.0.0
-2016-06-22
+2016-06-23
 **********************************************************************/
 
 include ("pages/header.html");
@@ -16,8 +16,8 @@ include ("pages/header.html");
 <!DOCTYPE html>
 <html>
 	<head>
-    <link rel="stylesheet" type="text/css" href="css/header.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/header.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
 </html>
 
@@ -47,7 +47,7 @@ echo "<div class='div-wrapper-movies'>";
 // DISPLAY ALL ENTRIES OF DATABASE IN COVER STYLE //
 foreach ($database->query($sql) as $row)
   {
-    $img=$row['cover'];
+    $img=$row['cover']; // SET COVER IMAGE
     $shorttitle=substr($row['title'],0,24); // CUT TITLE AFTER 24 CHARACTERS
     echo "<div class='div-cover'>
             <a href=pages/details.php?id=$row[id]><img src='$img'/></a>
