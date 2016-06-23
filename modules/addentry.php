@@ -28,7 +28,7 @@ if($stmt->rowCount() > 0){
         // CHECK IF USER CHOOSE IMAGE TO UPLOAD //
     
         // SET STANDARD COVER IMAGE // 
-        $stdimg = " images/stdcover.png";
+        $stdimg = "images/stdcover.png";
     
         if ($_FILES["cover"]["name"]=="") {
             // ARRAY FOR NEW ENTRY WITH STANDARD IMAGE //
