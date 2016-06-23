@@ -7,14 +7,21 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 Formular to update movie values
 
 Version 1.0.0
-2016-06-20
+2016-06-23
 **********************************************************************/
 
 include("header.html");
 
 // -------------------------------------------------------------------------- //
+// DATABASE CONNECTION VARIABLES //
+$dbhost='localhost';
+$dbname='mediadb';
+$dbusername='root';
+$dbpw='';
+
+// -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //
-$database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
+$database = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpw);
 
 // -------------------------------------------------------------------------- //
 // GET VALUES //
@@ -39,26 +46,14 @@ $format=$details['format'];
 <!DOCTYPE html>
 <html>
 	<head>  
-    <link rel="stylesheet" type="text/css" href="../css/formupdate.css" />
+        <link rel="stylesheet" type="text/css" href="../css/formupdate.css" />
 	</head>
     <body>
 
 <!-- -------------------------------------------------------------------------- -->
-<!-- FORM HEADLINE -->
-        <table class="table-form">
-            <tr class="tr-form-headline">
-                <th class="th-form-headline">
-                    Filmattribute &auml;ndern
-                </th>
-                
-                <!-- BUTTON BACK TO MAIN -->
-                <th class="th-form-buttonback">
-                    <a class="button-back" href="../index.php">zur&uuml;ck zur Hauptseite</a>
-                </th>
-            </tr>
-        </table>
-        
-        <div class="div-formheadline-line">
+<!-- HEADLINE DIV -->
+        <div class="div-headline">
+            Film ändern
             <hr>
         </div>
         
@@ -69,41 +64,36 @@ $format=$details['format'];
             <!-- FORM BOXES -->
             <div class="div-container-form">
                 <table class="table-editmovie">
-                    <tr>
-                        <!-- TABLE HEADER -->
-                        <th></th>
-                        <th>Current</th>
-                        <th>New</th>
-                    </tr>
+                    <br>
                     
 <!-- -------------------------------------------------------------------------- -->         
                     <!-- FILMTITLE -->
                     <tr>
-                        <td class="td-title">Filmtitel</td>
+                        <td class="td title first">Filmtitel</td>
                         <td>
                             <label class="label-filmtitle"><?php echo"$titel"?></label><br>
                         </td>   
                         <td>
-                            <input class="input-filmtitle" type="text" name="filmtitle" value="" size="70" maxlength="255"/>
+                            <input class="input-filmtitle" type="text" name="filmtitle" value="" size="50" maxlength="255"/>
                         </td>
                     </tr>
                     
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- ORIG. FILMTITLE -->
                     <tr>
-                        <td class="td-title">Originaltitel</td>
+                        <td class="td origtitle first">Originaltitel</td>
                         <td>
                             <label class="label-origtitle"><?php echo"$origtitle"?></label><br>
                         </td>
                         <td>
-                            <input class="input-origtitle" type="text" name="origtitle" value="" size="70" maxlength="255"/>
+                            <input class="input-origtitle" type="text" name="origtitle" value="" size="50" maxlength="255"/>
                         </td>
                     </tr>
                     
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- COVER IMAGE -->
                     <tr>
-                        <td class="td-cover">Cover</td>
+                        <td class="td cover first">Cover</td>
                         <td>
                             <?php echo "<img style='border-width: 0px;' src='../$coverimg' width='80' height='114'/><br>"?>
                         </td>
@@ -115,7 +105,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- DATE -->
                     <tr>
-                        <td class="td-cover">Erscheinungsjahr</td>
+                        <td class="td date first">Erscheinungsjahr</td>
                         <td>
                             <label class="label-date"><?php echo"$date"?></label><br>
                         </td>
@@ -133,7 +123,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- COUNTRY -->
                     <tr>
-                        <td class="td-country">Produktionsland</td>
+                        <td class="td country first">Produktionsland</td>
                         <td>
                             <label class="label-country"><?php echo"$country"?></label><br>
                         </td>
@@ -386,7 +376,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- LENGTH -->
                     <tr>
-                        <td class="td-length">Filmlänge</td>
+                        <td class="td length first">Filmlänge</td>
                         <td>
                             <label class="label-length"><?php echo"$length Minuten"?></label><br>
                         </td>
@@ -398,7 +388,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- FSK -->
                     <tr>
-                        <td class="td-fsk">Alterfreigabe (FSK)</td>
+                        <td class="td fsk first">Alterfreigabe (FSK)</td>
                         <td>
                             <label class="label-fsk"><?php echo"$fsk"?></label><br>
                         </td>
@@ -417,7 +407,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- GENRE -->
                     <tr>
-                        <td class="td-genre">Genre</td>
+                        <td class="td genre first">Genre</td>
                         <td>
                             <label class="label-genre"><?php echo"$genre"?></label><br>
                         </td>
@@ -442,9 +432,11 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- ACTORS -->
                     <tr>
-                        <td class="td-actors">Darsteller</td>
+                        <td class="td actors first">Darsteller</td>
                         <td>
-                            <label class="label-actors"><?php echo"$actors"?></label><br>
+                            <div class="div actors"></div>
+                            <?php echo"$actors"?>
+                            <br>
                         </td>
                         <td>
                             <textarea class="textarea-actors" type="text" name="actors" value="" cols="40" rows="10"></textarea>
@@ -454,7 +446,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- DIRECTOR -->
                     <tr>
-                        <td class="td-actors">Regisseur</td>
+                        <td class="td director first">Regisseur</td>
                         <td>
                             <label class="label-director"><?php echo"$director"?></label><br>
                         </td>
@@ -466,9 +458,11 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- SUMMERY -->
                     <tr>
-                        <td class="td-actors">Zusammenfassung</td>
+                        <td class="td summery first">Zusammenfassung</td>
                         <td>
-                            <label class="label-summery"><?php echo"$summery"?></label><br>
+                            <div class="div summery">
+                                <?php echo"$summery"?>
+                            </div>
                         </td>
                         <td>
                             <textarea class="textarea-summery" type="text" name="summery" value="" cols="50" rows="20"></textarea>
@@ -478,7 +472,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- FORMAT -->
                     <tr>
-                        <td class="td-format">Format</td>
+                        <td class="td format first">Format</td>
                         <td>
                             <label class="label-format"><?php echo"$format"?></label><br>
                         </td>
@@ -495,7 +489,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- LOCATION -->
                     <tr>
-                        <td class="td-location">Standort / Speicherort</td>
+                        <td class="td location first">Standort / Speicherort</td>
                         <td>
                             <label class="label-location"><?php echo"$location"?></label><br>
                         </td>
@@ -507,7 +501,7 @@ $format=$details['format'];
                     
 <!-- -------------------------------------------------------------------------- -->
                 <!-- FORM BUTTON -->
-                <input class="button-editentry" type="submit" name="submit" value="Film ändern!" />
+                <input class="button editentry" type="submit" name="submit" value="Film ändern!" />
             </div>
         </form>
         
