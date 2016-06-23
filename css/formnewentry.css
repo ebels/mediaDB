@@ -1,12 +1,12 @@
 /*********************************************************************
-Modulename: form.css
+Modulename: formnewentry.css
 Project:    mediaDB
 Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 
-CSS Style Sheet of newentry.php (Formular new movie)
+CSS Style Sheet of formnewentry.php (Formular new movie)
 
 Version 1.0.0
-2016-06-22
+2016-06-23
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -23,7 +23,7 @@ Version 1.0.0
 /* -------------------------------------------------------------------------- */
 
 /*-----------------------------------------------------------------*/
-/* DIV FOR GREY HORIZONTAL LINE */ 
+/* HEADLINE DIV */ 
 .div-headline {
     font-family: 'Raleway', sans-serif;
     margin: auto;
@@ -37,7 +37,7 @@ Version 1.0.0
 }
 
 /*-----------------------------------------------------------------*/
-/* DIV FOR FORM WITH ALL ENTRIES */
+/* WRAPPER / CONTAINER DIV FOR ALL OBJECTS IN FORM */
 .div-container-form {
     margin: auto;
     width: 900px;
@@ -52,7 +52,7 @@ Version 1.0.0
 }
 
 /*-----------------------------------------------------------------*/
-/* EFFECT FOR TEXT BOX, DATE BOX, NUMBER BOX; DROPDOWN BOX, TEXTAREA BOX, LABEL IN FORM */
+/* EFFECT FOR TEXT BOX, DATE BOX, NUMBER BOX, DROPDOWN BOX, TEXTAREA BOX, LABEL IN FORM */
 input[type="text"], input[type="date"] {
     padding: 8px 8px;
     line-height: 1px;
@@ -156,8 +156,8 @@ label {
 }
 
 /*-----------------------------------------------------------------*/
-/* EFFECT FOR DIV FSK */
-.div-fsk {
+/* EFFECT FOR DIV FSK + GENRE */
+.div-fsk, .div-genre {
     margin: 10px;
     height: 55px;
     margin-top: 20px;
@@ -168,14 +168,6 @@ label {
     color: #e32;
     content: ' *';
     display:inline;
-}
-
-/*-----------------------------------------------------------------*/
-/* EFFECT FOR DIV GENRE */
-.div-genre {
-    margin: 10px;
-    height: 55px;
-    margin-top: 20px;
 }
 
 /* DIV GENRE MARK AS REQUIRED */
@@ -218,7 +210,7 @@ label {
 }
 
 /*-----------------------------------------------------------------*/
-/* EFFECT FOR DIV FORMAT */
+/* EFFECT FOR DIV FORMAT / LOCATION */
 .div-format-location {
     position: relative;
     margin: 10px auto 0 auto;
