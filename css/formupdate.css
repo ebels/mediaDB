@@ -6,151 +6,102 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of formupdateentry.php (Formular edit movie)
 
 Version 1.0.0
-2016-06-17
+2016-06-23
 **********************************************************************/
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
+/* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/* EFFECT FOR FORMULAR EDIT ENTRY PAGE */
+/* ------ IMPORT FONT ------- */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
 /* -------------------------------------------------------------------------- */
 
-body {
-    /*background-image: url(../img/background.jpg);*/
-}
-
-
 /*-----------------------------------------------------------------*/
-/* EFFECT FOR TABLE FORM-HEADLINE */
-.table-form {
-    height: 90px;
-    width: 900px;
+/* HEADLINE DIV */ 
+.div-headline {
+    font-family: 'Raleway', sans-serif;
     margin: auto;
-}
-
-/* EFFECT FOR TABLEHEADER IN TABLE HEADLINE */
-.tr-form-headline {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-	font-size: 25px;
-    position: relative;
-    vertical-align: bottom;
-}
-
-/* EFFECT FOR TABLEHEADER HEADLINE TEXT */
-.th-form-headline {
-    text-align: left;
-}
-
-/* EFFECT FOR TABLEHEADER BUTTON BACK */
-.th-form-buttonback {
-    text-align: right;
-}
-
-/* EFFECT FOR BUTTON BACK IN TABLE HEADER */
-.button-back {
-    padding: 8px 8px;
-    line-height: 20px;
-    border-radius: 5px;
-    font-size: 15px;
-    background-color: lightgrey;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-}
-
-.button-back:hover {
-    background-color: 	Gainsboro;
-}
-
-/*-----------------------------------------------------------------*/
-/* DIV FOR GREY HORIZONTAL LINE */ 
-.div-formheadline-line {
-    margin: auto;
-    position: relative;
-    width: 900px;
+    position: absolute;
+    width: 1200px;
     height: auto;
+    top:250px;
+    left: 0;
+    right: 0;
+    font-size: 30px;
 }
 
 /*-----------------------------------------------------------------*/
 /* DIV FORM WITH ALL ENTRIES */
 .div-container-form {
+    font-family: 'Raleway', sans-serif;
     margin: auto;
-    position: relative;
-    width: 900px;
+    width: 1200px;
     height: auto;
     border: 1px solid lightgray;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 20px;
+    position: absolute;
+    top: 320px;
+    left: 0;
+    right: 0;
 }
 
 /*-----------------------------------------------------------------*/
-/* EFFECT FOR TEXT BOX, DATE BOX, NUMBER BOX; DROPDOWN BOX, TEXTAREA BOX, LABEL IN FORM */
-input[type="text"] {
+/* EFFECT FOR TEXT BOX, DATE BOX, NUMBER BOX, DROPDOWN BOX, TEXTAREA BOX, LABEL IN FORM */
+input[type="text"], input[type="date"] {
     padding: 8px 8px;
     line-height: 1px;
 }
 
-input[type="date"] {
-    padding: 8px 8px;
-    line-height: 10px;
-}
-
-select {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+select, input[type="number"], textarea {
     text-align: left;
     padding: 8px 8px;
     line-height: 10px; 
 }
 
-input[type="number"] {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    text-align: left;
-    padding: 8px 8px;
-    line-height: 10px;
-}
-
-textarea {
-    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-    text-align: left;
-    padding: 8px 8px;
-    line-height: 10px;
-}
-
-label {
-    font-weight: bold;
-}
-
-/*-----------------------------------------------------------------*/
-/* EFFECT FOR BUTTON EDIT ENTRY */
-.button-editentry {
-    padding: 8px 8px;
-    line-height: 30px;
-    margin: 10px;
-    border-radius: 5px;
-    font-size: 25px;
-    background-color: lightgrey;
-}
-
-.button-editentry:hover {
-    background-color: 	Gainsboro;
-}
-
-
 /*-----------------------------------------------------------------*/
 /* EFFECT FOR TABLE */
 .table-editmovie{
     border-collapse: collapse;
-}
-    
-th {
-    background-color: grey;
-    border-bottom: 1px solid #ddd;
-    height: 30px;
-    padding: 8px;
-    text-align: left;
-    width: 10%;
+    table-layout: fixed;
 }
 
 td {
     border-bottom: 1px solid #ddd;
     height: 25px;
     padding: 8px;
-    text-align: left;   
+    text-align: left;
+    width: 45%;
 }
 
+.first {
+    width: 25%;
+    font-weight: bold;
+}
+
+div {
+    width: 90%;
+}
+
+/*-----------------------------------------------------------------*/
+/* EFFECT FOR BUTTON ADD ENTRY */
+.editentry {
+    padding: 8px 8px;
+    line-height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    background-color: lightgrey;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.editentry:hover {
+    background-color: 	Gainsboro;
+}
