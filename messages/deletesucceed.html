@@ -3,38 +3,38 @@ Modulename: deletesucceed.html
 Project:    mediaDB
 Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 
-shows "movie successfully deleted from database" message
+shows message: "movie successfully deleted from database" 
 
 Version 1.0.0
-2016-06-16
+2016-06-23
 ********************************************************************** -->
 
 <!DOCTYPE html>
 <html>
 	<head>
-    <title>EMDB</title>
-    <link rel="stylesheet" type="text/css" href="../css/header.css" />    
-    <link rel="stylesheet" type="text/css" href="../css/message.css" />
+        <link rel="stylesheet" type="text/css" href="../css/header.css" />    
+        <link rel="stylesheet" type="text/css" href="../css/message.css" />
 	</head>
     
 	<body>
-        <br>
-
-<!-- -------------------------------------------------------------------------- -->
-<!-- TWO COLORED HEADLINE -->
-        <h1>
-            <!--<span class="user-letters">EBEL'S </span>-->
-            <span class="database-letters">MEDIA DATABASE</span>
-        </h1>
-        <br>
-        <hr>
+       <!-- -------------------------------------------------------------------------- -->
+        <!-- HEADER -->
+        <div class="div-header">
+            <span class="headline">Media<br>Database</span>
+            <div class="div-buttons">
+                <a class="button home" href="/mediaDB/index.php">Home</a>
+                <a class="button new" href="/mediaDB/pages/formnewentry.php">+ New</a>
+                <a class="button about" href="#">About</a>
+            </div>
+        </div>
+        <br><br>
         
 <!-- -------------------------------------------------------------------------- -->
 <!-- DIV DELETE SUCCEEDED -->
         <div class="div deletesucceed">
             <label>Eintrag erfolgreich gel&ouml;scht!</label><br><br>
-            <a class="button back" href="../index.php">zur&uuml;ck zur Hauptseite</a>
-            <br><br>
+            <hr>
+            <br>
             
             <!-- -------------------------------------------------------------------------- -->
             <!-- REDIRECT MESSAGE -->
@@ -54,7 +54,7 @@ Version 1.0.0
             }
             </script>
             
-            <span id="timer">
+            <span id="timer" class="timer">
             <script type="text/javascript">countDown();</script>
             </span>
         
