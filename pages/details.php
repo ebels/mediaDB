@@ -1,13 +1,13 @@
 <?php
 /*********************************************************************
-Modulename: showdetails.php
+Modulename: details.php
 Project:    mediaDB
 Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 
-show movie details
+show details of selected movie
 
 Version 1.0.0
-2016-06-21
+2016-06-23
 **********************************************************************/
 
 include("header.html");
@@ -16,8 +16,8 @@ include("header.html");
 <!DOCTYPE html>
 <html>
 	<head>
-    <link rel="stylesheet" type="text/css" href="../css/header.css" />    
-    <link rel="stylesheet" type="text/css" href="../css/details.css" />
+        <link rel="stylesheet" type="text/css" href="../css/header.css" />    
+        <link rel="stylesheet" type="text/css" href="../css/details.css" />
 	</head>
 </html>
 
@@ -92,17 +92,17 @@ if ($fsk == "FSK 0") {
                     <img class="img-fsk" src="<?php echo "$imgfsk" ?>"/>
                 </div>
                 
-                <br><hr class="hr-detail"><br>
+                <br><hr><br>
                 
                 <label class="label-bold">Filmlänge: </label><?php echo "$length" ?> min.<br>
                 <label class="label-bold">Filmstart: </label><?php echo "$date"?> (<?php echo"$country" ?>)<br><br>
                 <label class="label-bold">Regisseur: </label><?php echo "$director" ?><br>
                 <label class="label-bold">Darsteller: </label><?php echo "$actors" ?>
-                <br><br><hr class="hr-detail"><br>
+                <br><br><hr><br>
                 
                 <label class="label-bold">Zusammenfassung:</label><br>
                 <label><?php echo "$summery" ?></label>
-                <br><br><hr class="hr-detail"><br>
+                <br><br><hr><br>
                 
                 <div class="div-buttonsedit">
                     <a class="button delete" href="confirm.php?id=<?php echo"$id"?>">Löschen</a>

@@ -1,13 +1,13 @@
 <?php
 /*********************************************************************
-Modulename: newentry.php
+Modulename: formnewentry.php
 Project:    mediaDB
 Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 
 Formular to add movie to database
 
 Version 1.0.0
-2016-06-22
+2016-06-23
 **********************************************************************/
 
  include("header.html");
@@ -16,19 +16,19 @@ Version 1.0.0
 <!DOCTYPE html>
 <html>
 	<head>  
-    <link rel="stylesheet" type="text/css" href="../css/formnewentry.css" />
+        <link rel="stylesheet" type="text/css" href="../css/formnewentry.css" />
 	</head>
     <body>
 
 <!-- -------------------------------------------------------------------------- -->
-<!-- FORM HEADLINE AND BUTTON BACK -->
+<!-- HEADLINE DIV -->
         <div class="div-headline">
-            <span>Neuer Film hinzuf&uuml;gen</span>
+            Neuer Film hinzuf&uuml;gen
             <hr>
         </div>
         
 <!-- -------------------------------------------------------------------------- -->        
-        <!-- FORM NEW FILM ENTRY -->
+        <!-- FORM NEW MOVIE ENTRY -->
         <form action="../modules/addentry.php" method="post" enctype="multipart/form-data">
             <!-- FORM BOXES -->
             <div class="div-container-form">
