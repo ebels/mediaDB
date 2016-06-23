@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 delete movie from database
 
 Version 1.0.0
-2016-06-16
+2016-06-23
 **********************************************************************/
 
 // -------------------------------------------------------------------------- //
@@ -28,7 +28,11 @@ $result = $sql->fetch(\PDO::FETCH_ASSOC);
 // DELETE ENTRY WITH SELECTED ID //
 if ( $_GET['confirm'] == "yes" ) {
     $cover=$result['cover'];
-    if (file_exists("../$cover")) {
+    //ONLY DELETE IMAGE, IF NOT STDIMAGE IS SET
+    if ($cover == "images/stdcover.png")
+    {
+        
+    } elseif (file_exists("../$cover")) {
         unlink("../$cover");
     }
     $sql = "DELETE FROM movies WHERE id='$id'";
