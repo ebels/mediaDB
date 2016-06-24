@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of header.html
 
 Version 1.0.0
-2016-06-22
+2016-06-24
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -46,10 +46,21 @@ Version 1.0.0
     text-align: left;
     position: absolute;
     top: 50%;
-    left: 385px;
+    left: 600px;
     right: 0;
     transform: translate(-0%,-50%);
     color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR WRAPPER DIV LOGO ------- */
+.div-logo {
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 385px;
+    right: 0;
+    transform: translate(-0%,-50%);
 }
 
 /* -------------------------------------------------------------------------- */
