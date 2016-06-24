@@ -55,7 +55,8 @@ Version 1.0.0
 /* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR WRAPPER DIV LOGO ------- */
 .div-logo {
-    width: 20%;
+    width: 182px;
+    height: 268px;
     position: absolute;
     top: 50%;
     left: 385px;
