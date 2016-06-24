@@ -94,13 +94,13 @@ if ($fsk == "FSK 0") {
                 
                 <br><hr><br>
                 
-                <label class="label-bold">Filmlänge: </label><?php echo "$length" ?> min.<br>
+                <label class="label-bold">Laufzeit: </label><?php echo "$length" ?> min.<br>
                 <label class="label-bold">Filmstart: </label><?php echo "$date"?> (<?php echo"$country" ?>)<br><br>
                 <label class="label-bold">Regisseur: </label><?php echo "$director" ?><br>
                 <label class="label-bold">Darsteller: </label><?php echo "$actors" ?>
                 <br><br><hr><br>
                 
-                <label class="label-bold">Zusammenfassung:</label><br>
+                <label class="label-bold">Kurzbeschreibung:</label><br>
                 <label><?php echo "$summery" ?></label>
                 <br><br><hr><br>
                 

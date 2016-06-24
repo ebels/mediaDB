@@ -376,7 +376,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- LENGTH -->
                     <tr>
-                        <td class="td length first">Filmlänge</td>
+                        <td class="td length first">Laufzeit</td>
                         <td>
                             <label class="label-length"><?php echo"$length Minuten"?></label><br>
                         </td>
@@ -458,7 +458,7 @@ $format=$details['format'];
 <!-- -------------------------------------------------------------------------- -->  
                     <!-- SUMMERY -->
                     <tr>
-                        <td class="td summery first">Zusammenfassung</td>
+                        <td class="td summery first">Kurzbeschreibung</td>
                         <td>
                             <div class="div summery">
                                 <?php echo"$summery"?>

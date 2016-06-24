@@ -320,7 +320,7 @@ Version 1.0.0
 <!-- -------------------------------------------------------------------------- -->
                 <!-- DIV LENGTH -->
                 <div class="div-length">
-                    <label class="label-length">Filml&auml;nge (Minuten)</label><br>
+                    <label class="label-length">Laufzeit (Minuten)</label><br>
                     <input class="input-length" type="number" name="length" value="" size="30" maxlength="10" required/>
                 </div>
 
@@ -376,7 +376,7 @@ Version 1.0.0
 <!-- -------------------------------------------------------------------------- -->
                 <!-- DIV SUMMERY -->
                 <div class="div-summery">
-                    <label class="label-summery">Zusammenfassung</label><br>
+                    <label class="label-summery">Kurzbeschreibung</label><br>
                     <textarea class="textarea-summery" type="text" name="summery" value="" cols="50" rows="20"></textarea>
                 </div>
 
