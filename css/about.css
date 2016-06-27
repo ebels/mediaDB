@@ -1,0 +1,111 @@
+/*********************************************************************
+Modulename: header.css
+Project:    mediaDB
+Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
+
+CSS Style Sheet of header.html
+
+Version 1.0.0
+2016-06-27
+**********************************************************************/
+
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/* ------ IMPORT FONT ------- */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+/* ------ EFFECT FOR HEADLINE ------- */
+h1 {
+  position: relative;
+  margin-top: -14px;
+  display: inline-block;
+  letter-spacing: 4px;
+}
+
+/* ------ EFFECT FOR PARAGRAPH ------- */
+p {
+  width: 61%;
+  margin: 20px auto 40px auto;
+  line-height: 30px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR BACKGROUND ------- */
+.div-background {
+    background-image: url(../images/Cinema.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;
+    top: 185px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR DIV ABOUT ------- */
+.div-about {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    width: 900px;
+    max-width: 80%;
+    border: 2px solid #333;
+    border-top: none;
+    text-align: center;
+    margin: 60px auto;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 550px;
+}
+
+.top-border{
+    position: absolute;
+    height: 2px;
+    width: 24%;
+    background-color: #333;
+}
+
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR BUTTON ------- */
+.button-info {
+  outline: 0;
+  display: inline-block;
+  padding: 20px;
+  width: 440px;
+  max-width: 80%;
+  background-color: #333;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 3px;
+    vertical-align: middle;
+}
+
+.button-info:link, .button-info:visited, .button-info:link:hover, .button-info:visited:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.span-github {
+    margin-left: 20px;
+}
