@@ -7,21 +7,11 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 show details of selected movie
 
 Version 1.0.0
-2016-06-23
+2016-06-28
 **********************************************************************/
 
 include("header.html");
-?>
 
-<!DOCTYPE html>
-<html>
-	<head>
-        <link rel="stylesheet" type="text/css" href="../css/header.css" />    
-        <link rel="stylesheet" type="text/css" href="../css/details.css" />
-	</head>
-</html>
-
-<?php
 // -------------------------------------------------------------------------- //
 // DATABASE CONNECTION VARIABLES //
 $dbhost='localhost';
@@ -67,8 +57,18 @@ if ($fsk == "FSK 0") {
 }
 ?>
 
+
 <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/header.css" />    
+        <link rel="stylesheet" type="text/css" href="../css/details.css" />
+	</head>
+    
     <body>
+        <!-- -------------------------------------------------------------------------- -->
+        <!-- BACKGROUND -->
+        <div class="div-background"></div>
+        
         <!-- -------------------------------------------------------------------------- -->
         <!-- DIV WRAPPER MOVIE CARD -->
         <div class="div-wrapper">

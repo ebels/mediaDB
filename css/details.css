@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of details.php
 
 Version 1.0.0
-2016-06-23
+2016-06-28
 **********************************************************************/
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
@@ -22,17 +22,31 @@ Version 1.0.0
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR BACKGROUND ------- */
+.div-background {
+    background-image: url(../images/Elegant_Background-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 185px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+/* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIV WRAPPER ------- */
 .div-wrapper {
     font-family: 'Raleway', sans-serif;
     margin: 10px auto;
     padding: 10px;
-    background: #eee;
+    background-color: white;
     border-radius: 20px;
     width: 50%;
     overflow: auto;
     position: absolute;
-    top: 200px;
+    top: 230px;
     left: 0;
     right: 0;
 }
