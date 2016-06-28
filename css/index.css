@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of index.php (main page of movieDB)
 
 Version 1.0.0
-2016-06-27
+2016-06-28
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -17,24 +17,35 @@ Version 1.0.0
 /* ------ IMPORT FONT ------- */
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
+html, body {
+    height:100%;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR WRAPPER DIV COVER ------- */
-.div-wrapper-movies {
-    width: 60%;
-    height: auto;
-    text-align: center;
-    margin: 0 auto;
-    position: absolute;
+/* ------ EFFECT FOR WRAPPER DIV ------- */
+.div-container-content {
+    position : absolute;
+    min-height: 100%;
     top: 185px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: auto;
+    width: 100%;
+    text-align: center;
+    background-image: url(/mediaDB/images/Elegant_Background-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-wrapper-movies {
+    display: inline-block;
+    width: 65%;
+    margin-top: 60px;
+    border-radius: 15px;
+    background-color: white;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -44,7 +55,7 @@ Version 1.0.0
     width: 220px;
     height: auto;
     margin-top: 50px;
-    margin-left: 9px;
+    margin-left: 20px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -60,7 +71,7 @@ Version 1.0.0
 }
 
 .genre {
-    color: #999;
+    color: black;
     font-size: 14px;
 }
 
