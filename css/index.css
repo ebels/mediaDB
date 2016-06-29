@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of index.php (main page of movieDB)
 
 Version 1.0.0
-2016-06-28
+2016-06-29
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -45,7 +45,6 @@ html, body {
     width: 65%;
     margin-top: 60px;
     border-radius: 15px;
-    background-color: white;
 }
 
 /* -------------------------------------------------------------------------- */
