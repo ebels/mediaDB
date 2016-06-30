@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of entryfailed.php, uploadfailed.php, entrysucceed.html, confirmdelete.php, deletesucceed.html, updatesucceed.html
 
 Version 1.0.0
-2016-06-23
+2016-06-30
 **********************************************************************/
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
@@ -16,34 +16,114 @@ Version 1.0.0
 /* ------ IMPORT FONT ------- */
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
+/* ------ EFFECT FOR HEADLINE ------- */
+h1 {
+  position: relative;
+  margin-top: -14px;
+  display: inline-block;
+  letter-spacing: 4px;
+}
+
+/* ------ EFFECT FOR PARAGRAPH ------- */
+p {
+  width: 61%;
+  margin: 20px auto 40px auto;
+  line-height: 30px;
+    font-size: 20px;
+}
+
+/* ------ EFFECT FOR HORIZONTAL LINE ------- */
+hr {
+    height: 1px;
+    background-color: black;
+    width: 60%;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR BACKGROUND ------- */
+.div-background {
+    background-image: url(/mediaDB/images/Elegant_Background-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;
+    top: 185px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+/* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIV MESSAGE ------- */
 .div {
     font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-    border: solid 1px black;
-    margin: 200px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 30%;
+    position: relative;
+    width: 900px;
+    max-width: 80%;
+    border: 2px solid #333;
+    border-top: none;
     text-align: center;
+    margin: 60px auto;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-/*-----------------------------------------------------------------*/
-/* ------ EFFECT FOR BUTTON YES / NO  ------ */
-.button:hover {
-    background-color: 	Gainsboro;
+.top-border{
+    position: absolute;
+    height: 2px;
+    width: 24%;
+    background-color: #333;
 }
 
-.yes, .no {
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
+}
+
+/* ------ EFFECT FOR DIV MESSAGE (CONFIRM.PHP)  ------ */
+.message {
+    height: 600px;
+}
+
+/* ------ EFFECT FOR DIV UPLOADFAILED (UPLOADFAILED.HTML)  ------ */
+.uploadfailed, .updatesucceed, .entrysucceed, .entryfailed, .deletesucceed {
+    height: 300px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ------ EFFECT FOR BUTTONS ------- */
+.button-yes, .button-no {
     margin-left: 20px;
     width: 50px;
+}
+
+.button-yes, .button-no {
+  outline: 0;
+  display: inline-block;
+  padding: 20px;
+  width: 50px;
+  background-color: #333;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 3px;
+    vertical-align: middle;
+}
+
+.button-yes, .button-no:link, .button-yes, .button-no:visited, .button-yes, .button-no:link:hover, .button-yes, .button-no:visited:hover {
+  text-decoration: none;
+  color: #fff;
 }
 
 /*-----------------------------------------------------------------*/
@@ -51,3 +131,13 @@ Version 1.0.0
 .timer {
     font-size: 18px;
 }
+
+/*-----------------------------------------------------------------*/
+/* ------ EFFECT FOR DIV COVER (CONFIRM.PHP)  ------ */
+.img-cover {
+                width: 182px;
+                height: 268px;
+                border-radius: 10px;
+            }
+
+
