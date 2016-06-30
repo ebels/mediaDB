@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of details.php
 
 Version 1.0.0
-2016-06-29
+2016-06-30
 **********************************************************************/
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
@@ -23,7 +23,6 @@ h1 {
     display: inline-block;
     letter-spacing: 4px;
     text-align: center;
-    margin-bottom: 0;
 }
 
 
@@ -58,14 +57,12 @@ h1 {
     border-top: none;
     text-align: center;
     margin: 60px auto;
-    padding: 10px;
     position: absolute;
     top: 200px;
     left: 0;
     right: 0;
     bottom: 0;
-    /*height: 550px;*/
-    overflow: auto;
+    height: 750px;
 }
 
 .top-border{
@@ -77,12 +74,11 @@ h1 {
 
 .right {
     right: 0;
-    margin-top: -10px;
+    
 }
 
 .left {
     left: 0;
-    margin-top: -10px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -91,7 +87,7 @@ h1 {
     width: 200px;
     float: left;
     margin: 20px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .img-cover {
@@ -109,7 +105,7 @@ h1 {
 /* ------ EFFECT FOR FSK-IMAGE AND DETAILS (RIGHT SITE) ------- */
 .div-details {
     position: absolute;
-    width: 500px;
+    width: 550px;
     float: right;
     margin-left: 360px;
     margin-top: 40px;
