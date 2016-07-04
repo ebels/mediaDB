@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of details.php
 
 Version 1.0.0
-2016-06-30
+2016-07-04
 **********************************************************************/
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
@@ -39,7 +39,7 @@ h1 {
     background-size: cover;
     opacity: 0.5;
     position: absolute;
-    top: 185px;
+    top: 230px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -58,7 +58,7 @@ h1 {
     text-align: center;
     margin: 60px auto;
     position: absolute;
-    top: 200px;
+    top: 230px;
     left: 0;
     right: 0;
     bottom: 0;

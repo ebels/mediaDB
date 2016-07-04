@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of index.php (main page of movieDB)
 
 Version 1.0.0
-2016-06-29
+2016-07-04
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -31,7 +31,7 @@ html, body {
 .div-container-content {
     position : absolute;
     min-height: 100%;
-    top: 185px;
+    top: 230px;
     left: 0;
     width: 100%;
     text-align: center;

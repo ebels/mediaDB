@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of header.html
 
 Version 1.0.0
-2016-06-27
+2016-07-04
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -45,7 +45,7 @@ p {
     background-size: cover;
     opacity: 0.2;
     position: absolute;
-    top: 185px;
+    top: 230px;
     left: 0;
     right: 0;
     bottom: 0;

@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of header.html
 
 Version 1.0.0
-2016-06-28
+2016-07-04
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -18,94 +18,56 @@ Version 1.0.0
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 @import 'https://fonts.googleapis.com/css?family=Poiret+One';
 
-html, body {
-    height:100%;
-}
 
-/* -------------------------------------------------------------------------- */
-/* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
-/* -------------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR WHOLE DIV HEADER ------- */
-.div-header {
-    height: 185px;
+header {
+    background-color: black;
+    height: 230px;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    background-image: url(/mediaDB/images/header-jetBlack.jpg);
 }
 
-/* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR HEADLINE SPAN ------- */
-.headline {
+span {
     font-family: 'Poiret One', cursive;
-    font-size: 65px;
-    float: left;
-    width: 20%;
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 600px;
-    right: 0;
-    transform: translate(-0%,-50%);
+    font-size: 60px;
     color: white;
+    display: inline-block;
+    text-align: left;
 }
 
+ul {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    list-style-type: none;
+}
+
+li, a {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 14px 16px;
+}
+
+li:hover {
+    background-color: lightgrey;
+}
+
+
 /* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR WRAPPER DIV LOGO ------- */
+/* EFFECT FOR UNIQUE SETTINGS ON THIS PAGE */
+/* -------------------------------------------------------------------------- */
+.div-logo {
+    width: 100%;
+    text-align: center;
+    height: 170px;
+    border-bottom: 1px solid grey;
+}
+
 .img-logo {
     width: 215px;
-    height: 206px;
-    position: absolute;
-    top: 50%;
-    left: 385px;
-    right: 0;
-    transform: translate(-0%,-50%);
-}
-
-/* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR WRAPPER DIV BUTTONS ------- */
-.div-buttons {
-    width: 15%;
-    float: left;
-    position: absolute;
-    top: 50%;
-    right: 675px;
-    transform: translate(+100%,-50%);
-}
-
-/* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR PARTICULAR BUTTON ------- */
-.home, .new {
-    float: left;
-}
-
-.new {
-    margin-left: 35px;
-}
-
-.about {
-    float: right;
-    margin-left: 20px;
-}
-
-/* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR ALL BUTTONS ------ */
-.button {
-    font-family: 'Raleway', sans-serif;
-    padding: 8px 8px;
-    line-height: 20px;
-    border-radius: 5px;
-    font-size: 20px;
-    background-color: lightgrey;
-    text-decoration: none;
-    color: black;
+    height: 135px;
     display: inline-block;
-}
-
-.button:hover {
-    background-color: 	white;
 }

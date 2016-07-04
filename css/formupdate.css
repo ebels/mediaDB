@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of formupdateentry.php (Formular edit movie)
 
 Version 1.0.0
-2016-06-23
+2016-07-04
 **********************************************************************/
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
@@ -29,7 +29,7 @@ Version 1.0.0
     position: absolute;
     width: 1200px;
     height: auto;
-    top:250px;
+    top:270px;
     left: 0;
     right: 0;
     font-size: 30px;
@@ -46,7 +46,7 @@ Version 1.0.0
     font-family: 'Raleway', sans-serif;
     border-radius: 20px;
     position: absolute;
-    top: 320px;
+    top: 340px;
     left: 0;
     right: 0;
 }
