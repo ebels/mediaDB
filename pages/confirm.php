@@ -7,25 +7,19 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 yes / no confirmation to delete movie
 
 Version 1.0.0
-2016-06-30
+2016-07-04
 **********************************************************************/
 
 include("header.html");
-
-// -------------------------------------------------------------------------- //
-// DATABASE CONNECTION VARIABLES //
-$dbhost='localhost';
-$dbname='mediadb';
-$dbusername='root';
-$dbpw='';
+require_once ("../modules/dbconnect.php");
 
 // -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //
-$database = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpw);
+$connection = db_connect();
 
 // -------------------------------------------------------------------------- //
 // GET TITLE //
-$sql = $database->query("SELECT title, cover FROM movies WHERE id = '$_GET[id]'");
+$sql = $connection->query("SELECT title, cover FROM movies WHERE id = '$_GET[id]'");
 $result = $sql->fetch(\PDO::FETCH_ASSOC);
 $titel=$result['title'];
 $coverimg=$result['cover'];

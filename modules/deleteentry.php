@@ -7,20 +7,21 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 delete movie from database
 
 Version 1.0.0
-2016-06-23
+2016-07-04
 **********************************************************************/
-
+require_once ("modules/dbconnect.php")
+    
 // -------------------------------------------------------------------------- //
 // GET ID FROM MOVIE //
 $id = $_GET['id'];
 
 // -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //
-$database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
+$connection = db_connect();
 
 // -------------------------------------------------------------------------- //
 // DELETE COVER IMAGE IF EXIST //
-$sql = $database->query("SELECT cover FROM movies WHERE id = '$_GET[id]'");
+$sql = $connection->query("SELECT cover FROM movies WHERE id = '$_GET[id]'");
 $result = $sql->fetch(\PDO::FETCH_ASSOC);
 
 
@@ -36,7 +37,7 @@ if ( $_GET['confirm'] == "yes" ) {
         unlink("../$cover");
     }
     $sql = "DELETE FROM movies WHERE id='$id'";
-    $database->exec($sql);
+    $connection->exec($sql);
     
 } else if ( $_GET[confirm] == "no" ) {
     // REDIRECT TO MAIN PAGE //

@@ -7,25 +7,19 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 Formular to update movie values
 
 Version 1.0.0
-2016-06-23
+2016-07-04
 **********************************************************************/
 
 include("header.html");
-
-// -------------------------------------------------------------------------- //
-// DATABASE CONNECTION VARIABLES //
-$dbhost='localhost';
-$dbname='mediadb';
-$dbusername='root';
-$dbpw='';
+require_once ("../modules/dbconnect.php");
 
 // -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //
-$database = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpw);
+$connection = db_connect();
 
 // -------------------------------------------------------------------------- //
 // GET VALUES //
-$sql = $database->query("SELECT * FROM movies WHERE id = '$_GET[id]'");
+$sql = $connection->query("SELECT * FROM movies WHERE id = '$_GET[id]'");
 $details = $sql->fetch(\PDO::FETCH_ASSOC);
 $titel=$details['title'];
 $origtitle=$details['origtitle'];
@@ -40,7 +34,6 @@ $director=$details['director'];
 $summery=$details['summery'];
 $location=$details['location'];
 $format=$details['format'];
-
 ?>
 
 <!DOCTYPE html>

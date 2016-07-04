@@ -7,25 +7,19 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 show details of selected movie
 
 Version 1.0.0
-2016-06-29
+2016-07-04
 **********************************************************************/
 
 include("header.html");
-
-// -------------------------------------------------------------------------- //
-// DATABASE CONNECTION VARIABLES //
-$dbhost='localhost';
-$dbname='mediadb';
-$dbusername='root';
-$dbpw='';
+require_once ("../modules/dbconnect.php");
 
 // -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //
-$database = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpw);
+$connection = db_connect();
 
 // -------------------------------------------------------------------------- //
 // GET VALUES //
-$sql = $database->query("SELECT * FROM movies WHERE id = '$_GET[id]'");
+$sql = $connection->query("SELECT * FROM movies WHERE id = '$_GET[id]'");
 $details = $sql->fetch(\PDO::FETCH_ASSOC);
 $id=$details['id'];
 $titel=$details['title'];
@@ -60,7 +54,7 @@ if ($fsk == "FSK 0") {
 
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../css/header.css" />    
+        <link rel="stylesheet" type="text/css" href="../css/header.css" />
         <link rel="stylesheet" type="text/css" href="../css/details.css" />
 	</head>
     

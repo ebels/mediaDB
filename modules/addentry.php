@@ -7,18 +7,18 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 add movie entry to database
 
 Version 1.0.0
-2016-06-17
+2016-07-04
 **********************************************************************/
-
+require_once ("modules/dbconnect.php");
 
 // -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //
-$database = new PDO('mysql:host=localhost;dbname=mediadb', 'root', '');
+$connection = db_connect();
 
 // -------------------------------------------------------------------------- //
 // CHECK IF MOVIE ALREADY EXISTS IN DATABASE //
 $titleexists=$_POST['filmtitle'];
-$stmt = $database->query("SELECT title FROM movies WHERE title = '$titleexists'");
+$stmt = $connection->query("SELECT title FROM movies WHERE title = '$titleexists'");
 
 if($stmt->rowCount() > 0){
         // SHOW ENTRY FAILED //
@@ -48,7 +48,7 @@ if($stmt->rowCount() > 0){
             $arraynewentry['format']=$_POST['format'];
 
             // WRITE NEW ENTRY IN DATABASE //
-            $newentry = $database->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location, format) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location, :format)");
+            $newentry = $connection->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location, format) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location, :format)");
             $newentry->execute($arraynewentry);
 
             // SHOW ENTRY SUCCEED //
@@ -101,7 +101,7 @@ if($stmt->rowCount() > 0){
                 $arraynewentry['format']=$_POST['format'];
 
                 // WRITE NEW ENTRY IN DATABASE //
-                $newentry = $database->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location, format) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location, :format)");
+                $newentry = $connection->prepare("INSERT INTO movies (title, origtitle, cover, date, country, length, fsk, genre, actors, director, summery, location, format) VALUES (:title, :origtitle, :cover, :date, :country, :length, :fsk, :genre, :actors, :director, :summery, :location, :format)");
                 $newentry->execute($arraynewentry);
 
                 // SHOW ENTRY SUCCEED //
