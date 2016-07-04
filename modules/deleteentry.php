@@ -9,7 +9,7 @@ delete movie from database
 Version 1.0.0
 2016-07-04
 **********************************************************************/
-require_once ("modules/dbconnect.php")
+require_once ("dbconnect.php");
     
 // -------------------------------------------------------------------------- //
 // GET ID FROM MOVIE //

@@ -9,7 +9,7 @@ add movie entry to database
 Version 1.0.0
 2016-07-04
 **********************************************************************/
-require_once ("modules/dbconnect.php");
+require_once ("dbconnect.php");
 
 // -------------------------------------------------------------------------- //
 // CONNECT TO DATABASE //

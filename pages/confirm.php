@@ -52,7 +52,7 @@ $coverimg=$result['cover'];
             <?php 
             echo "
             <a class='button-yes' href=../modules/deleteentry.php?confirm=yes&id=$_GET[id]>Ja</a>
-            <a class='button-no' href=../modules/deleteentry.php?confirm=no&id=$_GET[id]>Nein</a>";
+            <a class='button-no' href=../index.php>Nein</a>";
             ?>
         </div>
     </body>
