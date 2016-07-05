@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 main page of mediaDB - show all database entries
 
 Version 1.0.0
-2016-06-30
+2016-07-05
 **********************************************************************/
 include ("pages/header.html");
 require_once ("modules/dbconnect.php");
@@ -31,30 +31,32 @@ $sql= 'SELECT * FROM movies ORDER BY title';
         <link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
 
-<!-- -------------------------------------------------------------------------- -->
-<!-- CONTAINER CONTENT -->
-<div class="div-container-content">
-   
-    <!-- -------------------------------------------------------------------------- -->
-    <!-- DIV WRAPPER FOR ALL MOVIE COVERS -->
-    <div class='div-wrapper-movies'>
+    <body>
+        <!-- -------------------------------------------------------------------------- -->
+        <!-- CONTAINER CONTENT -->
+        <div class="div-container-content">
 
-    <!-- -------------------------------------------------------------------------- -->
-    <!-- DISPLAY ALL ENTRIES OF DATABASE IN COVER STYLE -->
-    <?php
-        foreach ($connection->query($sql) as $row)
-      {
-        $img=$row['cover']; // SET COVER IMAGE
-        $shorttitle=substr($row['title'],0,24); // CUT TITLE AFTER 24 CHARACTERS
-        echo "<div class='div-cover'>
-                <a href=pages/details.php?id=$row[id]><img src='$img'/></a>
-                <span class='title'>$shorttitle</span><br>
-                <span class='genre'>$row[genre]</span><br><br>
-        </div>";
-      } ?>
+            <!-- -------------------------------------------------------------------------- -->
+            <!-- DIV WRAPPER FOR ALL MOVIE COVERS -->
+            <div class='div-wrapper-movies'>
 
-    </div>
-    <br><br><br>
-    
-</div>
+            <!-- -------------------------------------------------------------------------- -->
+            <!-- DISPLAY ALL ENTRIES OF DATABASE IN COVER STYLE -->
+            <?php
+                foreach ($connection->query($sql) as $row)
+              {
+                $img=$row['cover']; // SET COVER IMAGE
+                $shorttitle=substr($row['title'],0,24); // CUT TITLE AFTER 24 CHARACTERS
+                echo "<div class='div-cover'>
+                        <a href=pages/details.php?id=$row[id]><img src='$img'/></a>
+                        <span class='title'>$shorttitle</span><br>
+                        <span class='genre'>$row[genre]</span><br><br>
+                </div>";
+              } ?>
+
+            </div>
+            <br><br><br>
+
+        </div>
+    </body>
 </html>
