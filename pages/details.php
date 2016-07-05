@@ -7,7 +7,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 show details of selected movie
 
 Version 1.0.0
-2016-07-04
+2016-07-05
 **********************************************************************/
 
 include("header.html");
@@ -60,41 +60,42 @@ if ($fsk == "FSK 0") {
     
     <body>
         <!-- -------------------------------------------------------------------------- -->
-        <!-- BACKGROUND -->
-        <div class="div-background"></div>
-        
+        <!-- CONTAINER CONTENT -->
+        <div class="div-container-content"></div>
         <!-- -------------------------------------------------------------------------- -->
-        <!-- DIV WRAPPER MOVIE CARD -->
-        <div class="div-wrapper">
-            <div class="top-border left"></div>
-            <div class="top-border right"></div>
-            <h1><?php echo "$titel" ?></h1><br>
-            
-            <div class="div-images">
-                <img class="img-cover" src="<?php echo "../$coverimg" ?>"/><br><br>
-                <label class="label-frame">Genre: <?php echo "$genre" ?></label><br><br>
-                <label class="label-frame">Format: <?php echo "$format" ?><br>
-                Standort: <?php echo "$location" ?></label><br><br>
-                <img class="img-fsk" src="<?php echo "$imgfsk" ?>"/>
+        
+            <!-- -------------------------------------------------------------------------- -->
+            <!-- DIV WRAPPER MOVIE CARD -->
+            <div class="div-wrapper">
+                <div class="top-border left"></div>
+                <div class="top-border right"></div>
+                <h1><?php echo "$titel" ?></h1><br>
+
+                <div class="div-images">
+                    <img class="img-cover" src="<?php echo "../$coverimg" ?>"/><br><br>
+                    <label class="label-frame">Genre: <?php echo "$genre" ?></label><br><br>
+                    <label class="label-frame">Format: <?php echo "$format" ?><br>
+                    Standort: <?php echo "$location" ?></label><br><br>
+                    <img class="img-fsk" src="<?php echo "$imgfsk" ?>"/>
+                </div>
+
+                <div class="div-divider"></div>
+
+                <div class="div-details">
+                    <label class="label-bold">Originaltitel: </label><?php echo "$origtitle" ?><br>
+                    <label class="label-bold">Laufzeit: </label><?php echo "$length" ?> min.<br>
+                    <label class="label-bold">Filmstart: </label><?php echo "$date"?> (<?php echo"$country" ?>)<br><br>
+                    <label class="label-bold">Regisseur: </label><?php echo "$director" ?><br>
+                    <label class="label-bold">Darsteller: </label><?php echo "$actors" ?>
+                    <br><br><br>
+
+                    <label class="label-bold">Kurzbeschreibung:</label><br>
+                    <label><?php echo "$summery" ?></label>
+                    <br><br><br>
+                    <a class="button-delete" href="confirm.php?id=<?php echo"$id"?>">Löschen</a><br><br>
+                    <a class="button-edit" href="formupdateentry.php?id=<?php echo"$id"?>">Editieren</a>
+                </div>
+
             </div>
-            
-            <div class="div-divider"></div>
-            
-            <div class="div-details">
-                <label class="label-bold">Originaltitel: </label><?php echo "$origtitle" ?><br>
-                <label class="label-bold">Laufzeit: </label><?php echo "$length" ?> min.<br>
-                <label class="label-bold">Filmstart: </label><?php echo "$date"?> (<?php echo"$country" ?>)<br><br>
-                <label class="label-bold">Regisseur: </label><?php echo "$director" ?><br>
-                <label class="label-bold">Darsteller: </label><?php echo "$actors" ?>
-                <br><br><br>
-                
-                <label class="label-bold">Kurzbeschreibung:</label><br>
-                <label><?php echo "$summery" ?></label>
-                <br><br><br>
-                <a class="button-delete" href="confirm.php?id=<?php echo"$id"?>">Löschen</a><br><br>
-                <a class="button-edit" href="formupdateentry.php?id=<?php echo"$id"?>">Editieren</a>
-            </div>
-            
-        </div>
     </body>
 </html>
