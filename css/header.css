@@ -6,7 +6,7 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of header.html
 
 Version 1.0.0
-2016-07-05
+2016-07-07
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
@@ -17,6 +17,11 @@ Version 1.0.0
 /* ------ IMPORT FONT ------- */
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 @import 'https://fonts.googleapis.com/css?family=Poiret+One';
+
+@font-face {
+font-family: HapnaMono;
+src: url("/mediaDB/fonts/Hapna_Mono/HapnaMono-Light.otf") format("opentype");
+}
 
 
 /* -------------------------------------------------------------------------- */
@@ -40,17 +45,18 @@ header {
 }
 
 .img-logo {
-    width: 215px;
-    height: 140px;
+    width: 170px;
+    height: 170px;
     display: inline-block;
 }
 
 .headline {
-    font-family: 'Poiret One', cursive;
+    font-family: 'HapnaMono';
     font-size: 60px;
     color: white;
     display: inline-block;
     text-align: left;
+    transform: translateY(-20%);
 }
 
 ul {
