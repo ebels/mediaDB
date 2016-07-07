@@ -6,17 +6,12 @@ Author:     Sarah Ebelsheiser <sarah.ebel@outlook.com>
 CSS Style Sheet of header.html
 
 Version 1.0.0
-2016-07-04
+2016-07-07
 **********************************************************************/
 
 /* -------------------------------------------------------------------------- */
 /* EFFECT FOR GENERAL SETTINGS ON THIS PAGE */
 /* -------------------------------------------------------------------------- */
-html, body {
-    height:100%;
-}
-
-
 /* -------------------------------------------------------------------------- */
 /* ------ IMPORT FONT ------- */
 @import 'https://fonts.googleapis.com/css?family=Raleway';
@@ -42,26 +37,11 @@ p {
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/* ------ EFFECT FOR BACKGROUND ------- */
-.div-background {
-    background-image: url(../images/Cinema.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.2;
-    position: absolute;
-    min-height: 100%;
-    top: 230px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* -------------------------------------------------------------------------- */
 /* ------ EFFECT FOR DIV ABOUT ------- */
 .div-about {
     font-family: 'Raleway', sans-serif;
     position: relative;
-    width: 900px;
+    width: 70%;
     max-width: 80%;
     border: 2px solid #333;
     border-top: none;
